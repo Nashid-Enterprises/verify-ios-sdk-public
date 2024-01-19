@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
   spec.source       = { :git => "https://NirajAkratech@github.com/NirajAkratech/Nashid_SDK.git" }
   spec.requires_arc = true
-  #spec.source_files  = 'Nashid_SDK/**/*.{framework}'
+  spec.source_files  = 'IDVSDK.framework/**/*.{h,swift,m,mm, tflite,pch}'
   #spec.resource_bundles = {
    #     'Nashid_SDK' => #['Nashid_SDK/**/*#.#{storyboard,png,gif,xcassets,ttf,xib,json,strings#,bundle}']
     #}
