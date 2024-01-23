@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
-  spec.source_files  = 'IDVSDK.framework/**/*.{h,swift,m,mm,tflite,pch,json,car,storyboard,otf,plist,nib}'
+  spec.source_files  = '**/*.{h,swift,m,mm,tflite,pch,json,car,storyboard,otf,plist,nib,framework}'
   spec.resource_bundles = {
         'Nashid_SDK' => ['IDVSDK.framework/**/*#.#{storyboard,png,gif,xcassets,ttf,xib,json,strings#,bundle}']
   }
