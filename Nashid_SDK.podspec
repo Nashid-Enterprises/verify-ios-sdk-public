@@ -21,7 +21,7 @@ spec.source_files = [
   ]
 
   # Include Info.plist separately
-  spec.resources = '**/*.plist'
+  spec.resources = '**/Info.plist'
 
   #spec.source_files  = '**/*', 'Nashid_SDK/IDVSDK.framework/Info.plist'
   #spec.resources = "**/*.xib"
