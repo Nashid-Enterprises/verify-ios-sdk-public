@@ -10,9 +10,9 @@ Pod::Spec.new do |spec|
   spec.author         = "Nashid"
   spec.platform       = :ios, '12.0'
   spec.swift_version  = '5.0'
-  spec.source       = { :git => "https://NirajAkratech@github.com/NirajAkratech/Nashid_SDK.git" }
+  spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
-  spec.source_files  = 'IDVSDK.framework/**/*.{h,swift,m,mm, tflite,pch}'
+  spec.source_files  = 'IDVSDK.framework/**/*.{h,swift,m,mm,tflite,pch}'
   #spec.resource_bundles = {
    #     'Nashid_SDK' => #['Nashid_SDK/**/*#.#{storyboard,png,gif,xcassets,ttf,xib,json,strings#,bundle}']
     #}
