@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.source_files  = '**/*'
   spec.resources = "**/*.xib"
-  spec.exclude_files = ["**/*.xib.{plist}""]
+  spec.exclude_files = ["**/*.xib.{plist}"]
   #spec.resource_bundles = {
    #     'Nashid_SDK' => ['Nashid_SDK/**/*.{storyboard,png,gif,xcassets,ttf,xib,json,strings,bundle}']
   #}
