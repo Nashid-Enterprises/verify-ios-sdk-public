@@ -13,15 +13,15 @@ Pod::Spec.new do |spec|
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
 spec.source_files = [
-    'Nashid_SDK/**/*.h',
-    'Nashid_SDK/**/*.m',
-    'Nashid_SDK/**/*.mm',
-    'Nashid_SDK/**/*.swift',
-    'Nashid_SDK/**/*.xib'
+    '**/*.h',
+    '**/*.m',
+    '**/*.mm',
+    '**/*.swift',
+    '**/*.xib'
   ]
 
   # Include Info.plist separately
-  spec.resources = 'Nashid_SDK/**/*.plist'
+  spec.resources = '**/*.plist'
 
   #spec.source_files  = '**/*', 'Nashid_SDK/IDVSDK.framework/Info.plist'
   #spec.resources = "**/*.xib"
