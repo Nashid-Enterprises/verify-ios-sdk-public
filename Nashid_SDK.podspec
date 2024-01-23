@@ -13,18 +13,16 @@ Pod::Spec.new do |spec|
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
 
-# Explicitly list source files, excluding Info.plist
-  spec.source_files = [
+spec.source_files = [
     '**/*.h',
     '**/*.m',
     '**/*.mm',
     '**/*.swift',
-    '**/*.xib',
-    '**/Info.plist'
+    '**/*.xib'
   ]
 
-  # Exclude Info.plist from being added to the target
-  spec.exclude_files = '**/*.{plist}'
+  # Include Info.plist separately
+  spec.resources = '**/Info.plist'
 
   # Add any other resource files if needed
   spec.resources = '**/*.xib'
