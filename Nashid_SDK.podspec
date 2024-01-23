@@ -13,20 +13,24 @@ Pod::Spec.new do |spec|
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
 
-spec.source_files = [
+# Explicitly list source files, excluding Info.plist
+  spec.source_files = [
     '**/*.h',
     '**/*.m',
     '**/*.mm',
     '**/*.swift',
-    '**/*.xib'
+    '**/*.xib',
+    'Info.plist'
   ]
 
-  # Include Info.plist separately
-  spec.resources = '**/Info.plist'
+  # Exclude Info.plist from being added to the target
+  spec.exclude_files = '**/*.{plist}'
+
+  # Add the framework to the target
+  spec.vendored_frameworks = '**/IDVSDK.framework'
 
   # Add any other resource files if needed
   spec.resources = '**/*.xib'
-
 
   # Include Info.plist separately
   #spec.resources = '**/Info.plist'
