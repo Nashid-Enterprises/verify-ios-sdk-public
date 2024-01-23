@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.exclude_files = '**/*.{plist}'
 
   # Add any other resource files if needed
-  spec.resources = 'Nashid_SDK/**/*.xib'
+  spec.resources = '**/*.xib'
 
 
   # Include Info.plist separately
