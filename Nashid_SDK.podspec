@@ -20,6 +20,7 @@ Pod::Spec.new do |spec|
     '**/*.mm',
     '**/*.swift',
     '**/*.xib',
+    '**/*.traineddata',
     'Info.plist'
   ]
 
