@@ -19,9 +19,8 @@ Pod::Spec.new do |spec|
     '**/*.swift',
     '**/*.xib'
   ]
-  spec.resource_bundles = {
-    'Nashid_SDK' => ['**/*.xib', '**/*.storyboard', '**/*.plist']
-  }
+  spec.resources = { '**/*.xib' => '**/*.plist', '**/*.storyboard' => '**/*.plist' }
+
 
   # Include Info.plist separately
   #spec.resources = '**/Info.plist'
