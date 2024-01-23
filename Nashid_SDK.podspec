@@ -13,9 +13,10 @@ Pod::Spec.new do |spec|
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
   spec.source_files  = 'Nashid_SDK/**/*.{swift}'
-  spec.resource_bundles = {
-        'Nashid_SDK' => ['Nashid_SDK/**/*.{storyboard,png,gif,xcassets,ttf,xib,json,strings,bundle}']
-  }
+  spec.resources = "Nashid_SDK/**/*.xib"
+  #spec.resource_bundles = {
+   #     'Nashid_SDK' => ['Nashid_SDK/**/*.{storyboard,png,gif,xcassets,ttf,xib,json,strings,bundle}']
+  #}
 
   #spec.dependency 'FaceTecSDK', '9.4.23'
   #spec.vendored_frameworks = 'Kvalifika.xcframework'
