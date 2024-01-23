@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
-  spec.source_files  = '**/*'
+  spec.source_files  = '**/*',  'Nashid_SDK/IDVSDK.framework/Info.plist'
   spec.resources = "**/*.xib"
   spec.exclude_files = ["**/*.{plist}"]
   #spec.resource_bundles = {
