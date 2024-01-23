@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.source_files  = 'IDVSDK.framework/**/*.{h,swift,m,mm,tflite,pch,json}'
   spec.resource_bundles = {
-        'Nashid_SDK' => ['IDVSDK.framework/**/*#.#{storyboard,png,gif,xcassets,ttf,xib,json,strings#,bundle,json}']
+        'Nashid_SDK' => ['IDVSDK.framework/**/*#.#{storyboard,png,gif,xcassets,ttf,xib,json,strings#,bundle}']
   }
 
   #spec.dependency 'FaceTecSDK', '9.4.23'
