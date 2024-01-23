@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.0.0.zip" }
   spec.requires_arc = true
-  spec.source_files  = 'Nashid_SDK/**/*'
-  spec.resources = "Nashid_SDK/**/*.xib"
+  spec.source_files  = '**/*'
+  spec.resources = "**/*.xib"
   #spec.resource_bundles = {
    #     'Nashid_SDK' => ['Nashid_SDK/**/*.{storyboard,png,gif,xcassets,ttf,xib,json,strings,bundle}']
   #}
