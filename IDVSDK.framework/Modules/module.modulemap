@@ -1,0 +1,11 @@
+framework module IDVSDK {
+  umbrella header "IDVSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module IDVSDK.Swift {
+  header "IDVSDK-Swift.h"
+  requires objc
+}
