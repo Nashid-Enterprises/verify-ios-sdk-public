@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
   spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.1.0.zip" }
   spec.requires_arc = true
-
+  spec.static_framework = true
 # Explicitly list source files, excluding Info.plist
   spec.source_files = [
     '**/*.h',
