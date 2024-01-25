@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.author         = "Nashid"
   spec.platform       = :ios, '12.0'
   spec.swift_version  = '5.0'
-  spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.1.0.zip" }
+  spec.source       = { :http => "https://github.com/NirajAkratech/Nashid_SDK/archive/refs/tags/1.2.0.zip" }
   spec.requires_arc = true
   spec.static_framework = true
 # Explicitly list source files, excluding Info.plist
