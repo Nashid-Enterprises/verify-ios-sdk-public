@@ -47,7 +47,7 @@ Pod::Spec.new do |spec|
   #spec.vendored_frameworks = 'Kvalifika.xcframework'
 
   spec.dependency "OpenCV", "4.3.0"
-  spec.dependency "SwiftyTesseract", " ~> 3.1.3"
+  #spec.dependency "SwiftyTesseract", " ~> 3.1.3"
   spec.dependency "TensorFlowLiteObjC", "2.14.0"
   spec.dependency "Alamofire", "5.8.1"
   spec.dependency "lottie-ios", "4.3.3"
