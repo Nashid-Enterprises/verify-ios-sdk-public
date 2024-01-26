@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   spec.dependency "Alamofire", "5.8.1"
   spec.dependency "lottie-ios", "4.3.3"
   spec.dependency "SDWebImage", "5.18.5"
-  spec.dependency "OpenSSL-Universal", "1.1.1900"
+  spec.dependency "OpenSSL-Universal", "1.1.1100"
 
 
  tfl_dir = 'tensorflow/lite/'
