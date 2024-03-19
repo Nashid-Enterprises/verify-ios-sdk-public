@@ -1,7 +1,7 @@
 framework module IDVSDK {
   umbrella header "IDVSDK.h"
-
   export *
+
   module * { export * }
 }
 

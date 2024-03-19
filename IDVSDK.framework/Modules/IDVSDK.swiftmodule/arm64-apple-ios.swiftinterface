@@ -1,17 +1,20 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name IDVSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name IDVSDK
 import AVFoundation
+import Accelerate
 import Alamofire
 import AudioToolbox
 import Combine
 import CommonCrypto
+import CoreGraphics
 import CoreImage
+import CoreML
 import CoreNFC
 import CoreVideo
 import CryptoKit
 import CryptoTokenKit
+import DeveloperToolsSupport
 import Foundation
 @_exported import IDVSDK
 import ImageIO
@@ -21,20 +24,21 @@ import SDWebImage
 import Swift
 import SwiftUI
 import UIKit
+import VideoToolbox
 import Vision
 import _Concurrency
+import _CoreNFC_UIKit
 import _StringProcessing
+import _SwiftConcurrencyShims
 import libtesseract
-public protocol IdvScanResultDelegate : AnyObject {
-  func idvScanResult(result: [Swift.String : Any])
-}
-@objc open class IDVSDK : ObjectiveC.NSObject {
-  public init(sdkKey: Swift.String, sdkToken: Swift.String, sdkId: Swift.String, window: UIKit.UIViewController, delegate: (any IDVSDK.IdvScanResultDelegate)?, isIntroduction: Swift.Bool)
-  public func documentScan()
-  public func updateInstruction(introduction: Swift.Bool)
-  public func updateFeatureStep(nfc: Swift.Bool, liveness: Swift.Bool, faceMatch: Swift.Bool)
-  public func getInstruction() -> Swift.Bool
-  public func passportScan()
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NashidSDK : ObjectiveC.NSObject {
+  @objc public static let shared: IDVSDK.NashidSDK
+  @objc public var scanResultCallback: (([Swift.String : Any], Swift.String) -> Swift.Void)?
+  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String)
+  @objc public func configureIntroduction(to introduction: Swift.Bool)
+  @objc public func isIntroductionEnabled() -> Swift.Bool
+  @objc public func documentScan()
+  @objc public func passportScan()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
@@ -124,6 +128,8 @@ public class DataGroup2 : IDVSDK.DataGroup {
 public class DataGroupParser {
   @objc deinit
 }
+public func rotate90PixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, factor: Swift.UInt8)
+public func rotate90PixelBuffer(_ srcPixelBuffer: CoreVideo.CVPixelBuffer, factor: Swift.UInt8) -> CoreVideo.CVPixelBuffer?
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InstructionsCell : UIKit.UITableViewCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
@@ -135,6 +141,18 @@ public class DataGroupParser {
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class NotImplementedDG : IDVSDK.DataGroup {
   @objc deinit
+}
+extension CoreML.MLModel {
+  public func imageConstraint(forInput inputName: Swift.String) -> CoreML.MLImageConstraint?
+}
+@available(iOS 13.0, tvOS 13.0, *)
+extension CoreML.MLModel {
+  public func featureValue(fromUIImage image: UIKit.UIImage, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
+}
+@available(iOS 13.0, tvOS 13.0, macOS 10.15, *)
+extension CoreML.MLModel {
+  public func featureValue(fromCGImage image: CoreGraphics.CGImage, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
+  public func featureValue(fromImageAt url: Foundation.URL, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
 }
 public struct SettingsOption : Swift.Codable {
   public var nfc: Swift.Bool
@@ -271,10 +289,6 @@ public class DataGroup7 : IDVSDK.DataGroup {
     get
   }
   @objc deinit
-}
-public protocol GetNFCResult {
-  func mysts(res: Swift.Bool)
-  func myresult(data: IDVSDK.NFCPassportModel?)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup14 : IDVSDK.DataGroup {
@@ -644,6 +658,16 @@ public class X509Wrapper {
   public func getSubjectName() -> Swift.String?
   @objc deinit
 }
+public struct CLBoundingBox {
+  public let classIndex: Swift.Int
+  public let score: Swift.Float
+  public let rect: CoreFoundation.CGRect
+  public init(classIndex: Swift.Int, score: Swift.Float, rect: CoreFoundation.CGRect)
+}
+public func IOU(_ a: CoreFoundation.CGRect, _ b: CoreFoundation.CGRect) -> Swift.Float
+public func nonMaxSuppression(boundingBoxes: [IDVSDK.CLBoundingBox], iouThreshold: Swift.Float, maxBoxes: Swift.Int) -> [Swift.Int]
+public func nonMaxSuppression(boundingBoxes: [IDVSDK.CLBoundingBox], indices: [Swift.Int], iouThreshold: Swift.Float, maxBoxes: Swift.Int) -> [Swift.Int]
+public func nonMaxSuppressionMultiClass(numClasses: Swift.Int, boundingBoxes: [IDVSDK.CLBoundingBox], scoreThreshold: Swift.Float, iouThreshold: Swift.Float, maxPerClass: Swift.Int, maxTotal: Swift.Int) -> [Swift.Int]
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SettingsCell : UIKit.UITableViewCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
   @available(iOS 3.0, *)
@@ -665,6 +689,10 @@ public class DataGroup15 : IDVSDK.DataGroup {
     get
   }
   @objc deinit
+}
+extension UIKit.UIImage {
+  @nonobjc public func resized(to newSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat = 1) -> UIKit.UIImage
+  @nonobjc public func rotated(by degrees: CoreFoundation.CGFloat, keepSize: Swift.Bool = true) -> UIKit.UIImage
 }
 @available(iOS 15, *)
 public class PACEHandler {
@@ -708,6 +736,12 @@ public protocol DialCountriesControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc public func updateSearchResults(for searchController: UIKit.UISearchController)
   @objc deinit
 }
+@available(iOS 13.0, tvOS 13.0, macOS 10.15, *)
+extension Combine.Publisher where Self.Output : CoreML.MLFeatureProvider {
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.Map<Self, Swift.Result<any CoreML.MLFeatureProvider, any Swift.Error>>
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.CompactMap<Self, any CoreML.MLFeatureProvider>
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.TryMap<Self, (any CoreML.MLFeatureProvider)?>
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup9 : IDVSDK.DataGroup {
   @objc deinit
@@ -745,6 +779,10 @@ public enum DataGroupId : Swift.Int, Swift.CaseIterable {
     get
   }
 }
+extension CoreML.MLMultiArray {
+  @nonobjc public func reshaped(to dimensions: [Swift.Int]) throws -> CoreML.MLMultiArray
+  @nonobjc public func transposed(to order: [Swift.Int]) throws -> CoreML.MLMultiArray
+}
 public struct RecognizedBlock {
   public var text: Swift.String
   public var boundingBox: CoreFoundation.CGRect
@@ -766,6 +804,11 @@ public enum SecureMessagingSupportedAlgorithms {
 public class SecureMessaging {
   public init(encryptionAlgorithm: IDVSDK.SecureMessagingSupportedAlgorithms = .DES, ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
   @objc deinit
+}
+extension Swift.Array where Element : Swift.Comparable {
+  public func argmax() -> (Swift.Int, Element)?
+  public func argsort(by areInIncreasingOrder: (Element, Element) -> Swift.Bool) -> [Swift.Array<Element>.Index]
+  public func gather(indices: [Swift.Array<Element>.Index]) -> [Element]
 }
 public protocol ScannerViewDelegate : AnyObject {
   func ScannerView(_ scannerView: IDVSDK.ScannerViews, didFind scanResult: IDVSDK.ScanResult)
@@ -846,6 +889,16 @@ extension IDVSDK.NFCViewDisplayMessage {
     get
   }
 }
+public func argmax(_ array: [Swift.Float], count: Swift.Int? = nil) -> (Swift.Int, Swift.Float)
+public func argmax(_ ptr: Swift.UnsafePointer<Swift.Float>, count: Swift.Int, stride: Swift.Int = 1) -> (Swift.Int, Swift.Float)
+public func argmax(_ array: [Swift.Double], count: Swift.Int? = nil) -> (Swift.Int, Swift.Double)
+public func argmax(_ ptr: Swift.UnsafePointer<Swift.Double>, count: Swift.Int, stride: Swift.Int = 1) -> (Swift.Int, Swift.Double)
+public func clamp<T>(_ x: T, min: T, max: T) -> T where T : Swift.Comparable
+public func sigmoid(_ x: Swift.Float) -> Swift.Float
+public func sigmoid(_ x: Swift.Double) -> Swift.Double
+public func sigmoid(_ x: Swift.UnsafeMutablePointer<Swift.Float>, count: Swift.Int)
+public func sigmoid(_ x: Swift.UnsafeMutablePointer<Swift.Double>, count: Swift.Int)
+public func softmax(_ x: [Swift.Float]) -> [Swift.Float]
 @_hasMissingDesignatedInitializers @available(iOS 15, *)
 public class TagReader {
   @objc deinit
@@ -899,9 +952,25 @@ public class DataGroup {
   public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
   @objc deinit
 }
+extension UIKit.UIImage {
+  public func pixelBuffer() -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray() -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormatType: Darwin.OSType, colorSpace: CoreGraphics.CGColorSpace, alphaInfo: CoreGraphics.CGImageAlphaInfo) -> CoreVideo.CVPixelBuffer?
+}
+extension UIKit.UIImage {
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer)
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext)
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup5 : IDVSDK.DataGroup {
   @objc deinit
+}
+extension CoreGraphics.CGImage {
+  @nonobjc public func toByteArrayRGBA() -> [Swift.UInt8]
+  @nonobjc public class func fromByteArrayRGBA(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int) -> CoreGraphics.CGImage?
+  @nonobjc public class func fromByteArrayGray(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int) -> CoreGraphics.CGImage?
 }
 public struct Country : Swift.Decodable {
   public var flag: Swift.String {
@@ -937,6 +1006,13 @@ public struct NashidResults : Swift.Codable {
   public let allCheckDigitsValid: Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public func createPixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormat: Darwin.OSType) -> CoreVideo.CVPixelBuffer?
+public func createPixelBuffer(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func _createPixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormat: Darwin.OSType) -> CoreVideo.CVPixelBuffer?
+extension CoreVideo.CVBuffer {
+  public func copyToMetalCompatible() -> CoreVideo.CVPixelBuffer?
+  public func deepCopy(withAttributes attributes: [Swift.String : Any] = [:]) -> CoreVideo.CVPixelBuffer?
 }
 @_hasMissingDesignatedInitializers public class DataModel {
   public static func getFormatedDate(myDate: Foundation.Date) -> Swift.String
@@ -1011,6 +1087,8 @@ public class DataGroup11 : IDVSDK.DataGroup {
   public var companyAddressArabic: Swift.String?
   @objc deinit
 }
+public func top(_ k: Swift.Int, _ prob: [Swift.String : Swift.Double]) -> [(Swift.String, Swift.Double)]
+public func top(_ k: Swift.Int, _ observations: [Vision.VNClassificationObservation]) -> [(Swift.String, Swift.Double)]
 @_hasMissingDesignatedInitializers public class SwiftyTesseract {
   public var whiteList: Swift.String? {
     get
@@ -1165,6 +1243,59 @@ extension IDVSDK.PassiveAuthenticationError : Foundation.LocalizedError {
     get
   }
 }
+extension CoreGraphics.CGImage {
+  public func pixelBuffer() -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray() -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray(width: Swift.Int, height: Swift.Int, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormatType: Darwin.OSType, colorSpace: CoreGraphics.CGColorSpace, alphaInfo: CoreGraphics.CGImageAlphaInfo, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+}
+extension CoreGraphics.CGImage {
+  public static func create(pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreGraphics.CGImage?
+  public static func create(pixelBuffer: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext) -> CoreGraphics.CGImage?
+}
+public protocol MultiArrayType : Swift.Comparable {
+  static var multiArrayDataType: CoreML.MLMultiArrayDataType { get }
+  static func + (lhs: Self, rhs: Self) -> Self
+  static func - (lhs: Self, rhs: Self) -> Self
+  static func * (lhs: Self, rhs: Self) -> Self
+  static func / (lhs: Self, rhs: Self) -> Self
+  init(_: Swift.Int)
+  var toUInt8: Swift.UInt8 { get }
+}
+extension Swift.Double : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.Float : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.Int32 : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension CoreML.MLMultiArray {
+  public func cgImage(min: Swift.Double = 0, max: Swift.Double = 255, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> CoreGraphics.CGImage?
+  public func toRawBytes<T>(min: T, max: T, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> (bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, channels: Swift.Int)? where T : IDVSDK.MultiArrayType
+}
+public func createCGImage(fromFloatArray features: CoreML.MLMultiArray, min: Swift.Float = 0, max: Swift.Float = 255) -> CoreGraphics.CGImage?
+extension CoreML.MLMultiArray {
+  public func image(min: Swift.Double = 0, max: Swift.Double = 255, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> UIKit.UIImage?
+}
+public func createUIImage(fromFloatArray features: CoreML.MLMultiArray, min: Swift.Float = 0, max: Swift.Float = 255) -> UIKit.UIImage?
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class COM : IDVSDK.DataGroup {
   public var version: Swift.String {
@@ -1287,6 +1418,12 @@ extension IDVSDK.RecognitionLanguage : Swift.CustomStringConvertible {
     get
   }
 }
+extension ImageIO.CGImagePropertyOrientation {
+  public init(_ orientation: UIKit.UIImage.Orientation)
+}
+extension ImageIO.CGImagePropertyOrientation {
+  public init(_ orientation: UIKit.UIDeviceOrientation)
+}
 @available(iOS 13, macOS 10.15, *)
 public func AESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
 @available(iOS 13, macOS 10.15, *)
@@ -1366,6 +1503,16 @@ extension IDVSDK.SwiftyTesseract {
       get
     }
   }
+}
+public func resizePixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, cropX: Swift.Int, cropY: Swift.Int, cropWidth: Swift.Int, cropHeight: Swift.Int, scaleWidth: Swift.Int, scaleHeight: Swift.Int)
+public func resizePixelBuffer(_ srcPixelBuffer: CoreVideo.CVPixelBuffer, cropX: Swift.Int, cropY: Swift.Int, cropWidth: Swift.Int, cropHeight: Swift.Int, scaleWidth: Swift.Int, scaleHeight: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func resizePixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int)
+public func resizePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func resizePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int, output: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext)
+extension UIKit.UIImage {
+  @nonobjc public func toByteArrayRGBA() -> [Swift.UInt8]?
+  @nonobjc public class func fromByteArrayRGBA(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreFoundation.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
+  @nonobjc public class func fromByteArrayGray(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreFoundation.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
 }
 public struct VALUES {
 }
