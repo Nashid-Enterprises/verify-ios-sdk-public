@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		9N1am1nkEByK5OyDoLNCn4LXzs4=
+		yDH2JaV5qBoiP1JAWv+Pkd7UDKw=
 		</data>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/libtesseract.framework/libtesseract</key>
 		<data>
-		GEvi0Cy+9CLv9EyVRY3TwgfWfkI=
+		530PKUttHnoqFf6dkaM2+k/6/ZY=
 		</data>
 		<key>Headers/Box.h</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		cDVT3fSu2JfoGELTMxBZm9PPGvQ=
+		gFjgiMt1kJV9Hrzk5CeZ5uXOpVc=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
 		<data>
-		PL2MZhCIHhE8uydkjhtGYKMkig0=
+		9tqJ+sU57rT8HuBRgX59O57cUIA=
 		</data>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -383,7 +383,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H6DtT7/O6uFGSoGp8B3CsKmO5l2J3rGfqd346S9DXHg=
+			JF3o+MjyNWQyQKyN16vAGg3VN59E3EzvmxxRd8RishU=
 			</data>
 		</dict>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
@@ -495,7 +495,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1deUAKQsdbaWYsST7N0nFVO3yUA7kgXUFGcBchzwnoI=
+			cqX9PiziR3XEWHasoky5qxZND53tflwjXY9QXOukj7M=
 			</data>
 		</dict>
 		<key>Headers/Box.h</key>
@@ -684,7 +684,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jSL0hQXx81rTUPIJZPuL/eXjcw2yIMqt61jzk6xdl9w=
+			W9MDj20slZxyCKwHxNRla/MVdCAzS1KxihI2IBxjVOE=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -824,7 +824,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zHeINpIkO699yFK2aNILOyD8SH/iOsZvMx8ELK3SfZk=
+			rOrICmRvpVIYO7K2UUT4KPM28pXBi8CI9SyQLYddVH4=
 			</data>
 		</dict>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
