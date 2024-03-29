@@ -34,7 +34,7 @@ import libtesseract
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NashidSDK : ObjectiveC.NSObject {
   @objc public static let shared: IDVSDK.NashidSDK
   @objc public var scanResultCallback: (([Swift.String : Any], Swift.String) -> Swift.Void)?
-  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String)
+  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String, baseUrl: Swift.String)
   @objc public func configureIntroduction(to introduction: Swift.Bool)
   @objc public func isIntroductionEnabled() -> Swift.Bool
   @objc public func documentScan()
@@ -226,6 +226,31 @@ public class ChipAuthenticationInfo : IDVSDK.SecurityInfo {
   public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
   public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
   public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class SignatureView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var isEmpty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func clear()
+  @_Concurrency.MainActor(unsafe) open var signature: UIKit.UIImage? {
+    get
+  }
   @objc deinit
 }
 public func binToHexRep(_ val: [Swift.UInt8], asArray: Swift.Bool = false) -> Swift.String
@@ -920,6 +945,7 @@ public struct DataGroupHash {
 @_hasMissingDesignatedInitializers public class GlobalStateManager {
   public static var nashidResults: IDVSDK.NashidResults?
   public static var kDocNumber: Swift.String
+  public static var mrzOriginal: Swift.String
   public static var kDOB: Swift.String
   public static var kExpire: Swift.String
   public static var documentType: Swift.String
@@ -930,14 +956,17 @@ public struct DataGroupHash {
   public static var frontSide: UIKit.UIImage?
   public static var cropBackSide: UIKit.UIImage?
   public static var cropFrontSide: UIKit.UIImage?
+  public static var faceBeforeRemoveBackgroundLiveness: UIKit.UIImage?
   public static var faceLiveness: UIKit.UIImage?
   public static var faceNFC: UIKit.UIImage?
+  public static var signImage: UIKit.UIImage?
   public class func resetStaticVar()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SdkConfig {
   public static var sdkToken: Swift.String
   public static var sdkId: Swift.String
+  public static var baseUrl: Swift.String
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)

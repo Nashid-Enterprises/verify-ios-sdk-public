@@ -393,7 +393,7 @@ SWIFT_CLASS("_TtC6IDVSDK9NashidSDK")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NashidSDK * _Nonnull shared;)
 + (NashidSDK * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) void (^ _Nullable scanResultCallback)(NSDictionary<NSString *, id> * _Nonnull, NSString * _Nonnull);
-- (void)initializeSDKWithToken:(NSString * _Nonnull)sdkToken id:(NSString * _Nonnull)sdkId;
+- (void)initializeSDKWithToken:(NSString * _Nonnull)sdkToken id:(NSString * _Nonnull)sdkId baseUrl:(NSString * _Nonnull)baseUrl;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)configureIntroductionTo:(BOOL)introduction;
@@ -477,6 +477,52 @@ SWIFT_CLASS("_TtC6IDVSDK22SettingsViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class UIColor;
+@class UITouch;
+@class UIEvent;
+
+/// IBDesignable class for SignatureView
+/// Extended from UIView
+/// Main class for drawing signature
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC6IDVSDK13SignatureView")
+@interface SignatureView : UIView
+/// IBInspectable - Drawing line width IBInspectable
+@property (nonatomic) IBInspectable CGFloat lineWidth;
+/// IBInspectable - Drawing line color IBInspectable
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull lineColor;
+/// SignatureView - Interface View
+- (void)prepareForInterfaceBuilder;
+/// Default draw function, will call on touch
+/// \param rect drawing view frame
+///
+- (void)drawRect:(CGRect)rect;
+/// default init
+/// \param frame view frame
+///
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// touchesBegan
+/// \param touch Initial Touch
+///
+/// \param event touch event
+///
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touch withEvent:(UIEvent * _Nullable)event;
+/// touchesMoved
+/// \param touch Moving touches
+///
+/// \param event touch event
+///
+- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touch withEvent:(UIEvent * _Nullable)event;
+/// touchesEnded
+/// \param touch Last Touch
+///
+/// \param event touch event
+///
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touch withEvent:(UIEvent * _Nullable)event;
+@end
+
+
 
 SWIFT_CLASS("_TtC6IDVSDK27StartScanningViewController")
 @interface StartScanningViewController : UIViewController
@@ -484,6 +530,9 @@ SWIFT_CLASS("_TtC6IDVSDK27StartScanningViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		yDH2JaV5qBoiP1JAWv+Pkd7UDKw=
+		9N1am1nkEByK5OyDoLNCn4LXzs4=
 		</data>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/libtesseract.framework/libtesseract</key>
 		<data>
-		AbwTvyCcV8nsSGtc3iViSYvgjN8=
+		GEvi0Cy+9CLv9EyVRY3TwgfWfkI=
 		</data>
 		<key>Headers/Box.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/IDVSDK-Swift.h</key>
 		<data>
-		RylRJBWChP72kayigOAVuLgDJMM=
+		fOn6W5oIpJwKN0EF1L19LMMuGOw=
 		</data>
 		<key>Headers/IDVSDK.h</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
-		A23RQWuU5OA21VikgfSD9xPK9i0=
+		/kDD9CP7EetvrZdLUYHDmKokPC0=
 		</data>
 		<key>Main.storyboardc/InstructionsViewController.nib</key>
 		<data>
@@ -143,6 +143,10 @@
 		<key>Main.storyboardc/SelectOptionViewController.nib</key>
 		<data>
 		wEGhGXSUW7HMHytUfluooDw3x2g=
+		</data>
+		<key>Main.storyboardc/SignatureViewController.nib</key>
+		<data>
+		fTUzKGjbnf80H2CX1ELDaIx9BqE=
 		</data>
 		<key>Main.storyboardc/StartScanningViewController.nib</key>
 		<data>
@@ -160,6 +164,10 @@
 		<data>
 		iYlZvNF4VgWfpGMYF1+fY6wdgQQ=
 		</data>
+		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
+		<data>
+		9LFLRETmAWStJ0fbstzdFr02bhE=
+		</data>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<data>
 		HWFSeNKWq9/RtNEa+GE1SbW0jIU=
@@ -174,27 +182,27 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		yXahEpDcJEIJ/tYynEc4ZJcdbd8=
+		cDVT3fSu2JfoGELTMxBZm9PPGvQ=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		8xcBqiPlIFI2guv0eU6NKxMBfkw=
+		Go6VLOx+ZJq9/MWbGsEP3d3zvPk=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		pAAzztxxYQTYfzvDwWR25+HC/dE=
+		QIQJNdoWCW+urrNUC7VzRUi9ox8=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		YbX9LO02ZAJZLdOTxUfNRQkIqjo=
+		kEE0csbZ182uOE8BwgO3X9fgTqY=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		pAAzztxxYQTYfzvDwWR25+HC/dE=
+		QIQJNdoWCW+urrNUC7VzRUi9ox8=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8prl55KbF4kJILoUddHPuB5XIzI=
+		fDdceuXPBznLmmuPHJDu+B975o0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -238,7 +246,7 @@
 		</data>
 		<key>NewResultViewController.storyboardc/PLd-hY-cl8-view-nPG-H6-NJv.nib</key>
 		<data>
-		+BDKfetS4hdG4YmP5Uz8iGcyR1w=
+		0bsD51Vq/yUwjI+L+iVwUhwItm4=
 		</data>
 		<key>NewResultViewController.storyboardc/ScanningResultVC.nib</key>
 		<data>
@@ -254,7 +262,7 @@
 		</data>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
 		<data>
-		TkuLiXq8SuSqiaqzElOsnaK77B8=
+		PL2MZhCIHhE8uydkjhtGYKMkig0=
 		</data>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -375,7 +383,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JF3o+MjyNWQyQKyN16vAGg3VN59E3EzvmxxRd8RishU=
+			H6DtT7/O6uFGSoGp8B3CsKmO5l2J3rGfqd346S9DXHg=
 			</data>
 		</dict>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
@@ -487,7 +495,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hiS1fUXWLfkSVaJTjubeL2w7J7DthBw0/GBoQLShEyc=
+			1deUAKQsdbaWYsST7N0nFVO3yUA7kgXUFGcBchzwnoI=
 			</data>
 		</dict>
 		<key>Headers/Box.h</key>
@@ -508,7 +516,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cAOJT7hw1vfs/uLPQInnfCigDnMuTj4v3LhmoVDjgXU=
+			tQBrFJO2sBbZX+cWQ5VoXz7lUuk+6f53vcxHa2B14fk=
 			</data>
 		</dict>
 		<key>Headers/IDVSDK.h</key>
@@ -585,7 +593,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p0/K22wy8Gt+fi0VH2RjuFmv3vZHtMffbaZrVF1FGdY=
+			yOgvbUEWoUEw8k6MBknkPcP75uUWW/9AYm0hDgumDn8=
 			</data>
 		</dict>
 		<key>Main.storyboardc/InstructionsViewController.nib</key>
@@ -607,6 +615,13 @@
 			<key>hash2</key>
 			<data>
 			fRLmiv5WBCd52TJjyMv/3pAtyArpm7vFVZbqGrgzHw8=
+			</data>
+		</dict>
+		<key>Main.storyboardc/SignatureViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mm40PFaSOlPWL4Wg1pPPs0DUiFe23nI0wvuWHka40Ss=
 			</data>
 		</dict>
 		<key>Main.storyboardc/StartScanningViewController.nib</key>
@@ -637,6 +652,13 @@
 			IEvPC8SoE9KQH7wc+BeTzlvctDCB/sNOkxeDwFHvQXw=
 			</data>
 		</dict>
+		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Is+AHgVNZg9zUqDFiKkyFR7xrtrejLIYVd2jV3iwxiw=
+			</data>
+		</dict>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -662,42 +684,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uwsW/VhPL0oj0Dky6lLmR5O9OI0X4tU0ERma8DFe/Go=
+			jSL0hQXx81rTUPIJZPuL/eXjcw2yIMqt61jzk6xdl9w=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6RUu0DLxOjGXBjYus8ha21jBKcFoEiSRFBYJe8Eb9Lw=
+			rq40bM2w2hcKh7/361SQy36DLC1Q4dH9xa0K9pMAFzI=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KwwMiIfn/C+yhjL5LhC7gSKfy0ge6SoZHNyjwjrAmVg=
+			1zj0vzGH0RNPmmvVe6jayEwzT8WgJd6WHD669Nz/X8M=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BHfwr/iSn1+Xj2uRsuHb/4fbaU0c1FM0e7kzJ9Mwt4Q=
+			qGm/Ki42ZVzxOnUgsRLa6h0mL2RhEK8iltenNBPscDk=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KwwMiIfn/C+yhjL5LhC7gSKfy0ge6SoZHNyjwjrAmVg=
+			1zj0vzGH0RNPmmvVe6jayEwzT8WgJd6WHD669Nz/X8M=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			scSTfjjeDNHmoxO9eV7w2l+Elw9mTJ2OoaoRRsmBup8=
+			CODNkwEKMH63rejWYS5u5hRqjIqQcdAyvUait/xWiK4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -774,7 +796,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wAMOLRWM5KpQzboRicX+3VzsYg3Xb83yBwLKxx6tf6M=
+			bJDEw8norZGSgW2QP6gXPymvuWb0QIvSxvpIP/NodZc=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/ScanningResultVC.nib</key>
@@ -802,7 +824,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dOUsmQ9CSfcz4NkkxLwK9Ap9q4D8zyVgvnRbOLpXyic=
+			zHeINpIkO699yFK2aNILOyD8SH/iOsZvMx8ELK3SfZk=
 			</data>
 		</dict>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
