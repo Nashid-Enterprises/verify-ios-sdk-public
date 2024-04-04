@@ -34,9 +34,10 @@ import libtesseract
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NashidSDK : ObjectiveC.NSObject {
   @objc public static let shared: IDVSDK.NashidSDK
   @objc public var scanResultCallback: (([Swift.String : Any], Swift.String) -> Swift.Void)?
-  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String, baseUrl: Swift.String)
+  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String, baseUrl: Swift.String, employeeEmail: Swift.String)
   @objc public func configureIntroduction(to introduction: Swift.Bool)
   @objc public func isIntroductionEnabled() -> Swift.Bool
+  public static func dismissAllViewControllers()
   @objc public func documentScan()
   @objc public func passportScan()
   @objc deinit
