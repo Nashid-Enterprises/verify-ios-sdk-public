@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name           = 'Nashid_SDK'
-  spec.version        = '1.0.0'
+  spec.version        = '1.7.0'
   spec.summary        = 'Nashid helps you to uniquely identify your users.'
   spec.description    = 'Nashid completes a new document API integration and url changed.'
   spec.homepage       = 'https://www.Nashid.com'
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.author         = "Nashid"
   spec.platform       = :ios, '12.0'
   spec.swift_version  = '5.0'
-  spec.source       = { :http => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public/archive/refs/tags/1.6.0.zip" }
+  spec.source       = { :http => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public/archive/refs/tags/1.7.0.zip" }
   spec.requires_arc = true
   spec.static_framework = true
 # Explicitly list source files, excluding Info.plist
