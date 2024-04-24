@@ -1,19 +1,23 @@
 Pod::Spec.new do |spec|
 
   spec.name           = 'Nashid_SDK'
-  spec.version        = '1.7.0'
+  spec.version        = '1.7.1'
   spec.summary        = 'Nashid helps you to uniquely identify your users.'
-  spec.description    = 'Nashid completes a new document API integration and URL changed.'
-  spec.homepage       = 'https://www.Nashid.com'
-  spec.license        = 'MIT'
+  spec.description    = 'An identity verification tool integrated seamlessly in your application for easy and robust new customers on-boarding.'
+  spec.homepage       = 'https://www.nashid.io'
+  
+  # Update the license declaration to include the license file path if it's in the root directory
+  spec.license        = { :type => 'MIT', :file => 'LICENSE' }
+  
   spec.author         = 'Nashid'
   spec.platform       = :ios, '12.0'
   spec.swift_version  = '5.0'
 
-  spec.source       = { :http => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public/archive/refs/tags/1.7.0.zip"}
-  spec.requires_arc = true
-  spec.static_framework = true
+  # Update the source URL to use HTTPS for better security
+  spec.source         = { :git => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public.git", :tag => "1.7.1" }
 
+  spec.requires_arc   = true
+  spec.static_framework = true
   spec.vendored_frameworks = 'IDVSDK.framework'
 
   spec.dependency "OpenCV", "4.3.0"
@@ -23,6 +27,16 @@ Pod::Spec.new do |spec|
   spec.dependency "lottie-ios", "4.3.3"
   spec.dependency "SDWebImage", "5.18.5"
   spec.dependency "OpenSSL-Universal", "1.1.1100"
+  
+  spec.pod_target_xcconfig = {
+    'ARCHS[sdk=iphoneos*]' => 'arm64',
+    'ARCHS[sdk=iphonesimulator*]' => 'x86_64',
+    'VALID_ARCHS' => 'x86_64 arm64'
+  }
+
+  spec.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+  }
 
 end
 
