@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		yDH2JaV5qBoiP1JAWv+Pkd7UDKw=
+		qM5SFVjvKFzOkMe37UOnu9Jc7ck=
 		</data>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>FaceValidationViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		ZDl7SPt/HesuqBdahR+9u62xqw8=
+		mbpkOw+JULQynhbBALyZYVYmq5E=
 		</data>
 		<key>Frameworks/libtesseract.framework/Info.plist</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/libtesseract.framework/libtesseract</key>
 		<data>
-		SNgQQxqB8jcyDTenh/hwsJE0eZ0=
+		3CJS8dx6SoPdeLsMuRTFNGhq1iY=
 		</data>
 		<key>Headers/Box.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/IDVSDK-Swift.h</key>
 		<data>
-		dz7ewXSTpTp2O95zBaZtWi5icQc=
+		woJq/LIVYVfSRCiM59hlXG0xawM=
 		</data>
 		<key>Headers/IDVSDK.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qELsfCL1pZHY1x98opoGlQGKoZ0=
+		H3dDbnHOQFrcedhivDQa5aMMlME=
 		</data>
 		<key>LivenessViewController.storyboardc/Info.plist</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>LivenessViewController.storyboardc/NON-EK-peo-view-z2O-9C-ORD.nib</key>
 		<data>
-		QkWdSEFMlMc1f6qiGoeXxa0/46o=
+		XSfHQo7sosPeavFW07N5JjGwQYg=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Main.storyboardc/TJX-zT-qXQ-view-Vmu-5M-JYZ.nib</key>
 		<data>
-		8pSBJArxpaWFvjcVPqawenxC4/8=
+		38qJXXJZX9VFvXhZyyH++TiHAXs=
 		</data>
 		<key>Main.storyboardc/UINavigationController-ymR-I9-EsV.nib</key>
 		<data>
@@ -162,19 +162,19 @@
 		</data>
 		<key>Main.storyboardc/Wme-Be-lQ3-view-NgF-V2-ziB.nib</key>
 		<data>
-		iYlZvNF4VgWfpGMYF1+fY6wdgQQ=
+		3x4wd+AZsILkTuVJaZBPa4CK1yY=
 		</data>
 		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
 		<data>
-		9LFLRETmAWStJ0fbstzdFr02bhE=
+		XzMBqNbb+bTbPAusXG227kLDiuM=
 		</data>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<data>
-		HWFSeNKWq9/RtNEa+GE1SbW0jIU=
+		pPaZ3u7r5gFxxpVaX0Bs7dMnI+s=
 		</data>
 		<key>Main.storyboardc/ltL-of-FyK-view-Xil-9m-NCv.nib</key>
 		<data>
-		Q2jTgoXB2esElOnLWo9fijZvdwE=
+		Y7LVa+7qyKqgBOp8ItveMvzbH10=
 		</data>
 		<key>MobileFaceNet.tflite</key>
 		<data>
@@ -182,27 +182,27 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		f8Q5lGDY7599/AWlatcdlcWi9ps=
+		z0a9k8koTCyFrDEfMeDz6cJDYZQ=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		LtnkTGik8tfhyxt8/qvzYdB5pAY=
+		bdtHFrs5fWuRDadc9iYFMmRhHa8=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		flIr2w0anbmCah85BbOtKgKDTuo=
+		VS6kNaE2UeC01oFLh6n0X2oaR4s=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		kEE0csbZ182uOE8BwgO3X9fgTqY=
+		ENlGaFITK5Tz1bN4wQYUnk1HkHI=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		flIr2w0anbmCah85BbOtKgKDTuo=
+		VS6kNaE2UeC01oFLh6n0X2oaR4s=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		l9895Cd87ksrtFTUpEE3tFY6obY=
+		au5ir7tgzclOIuX9T7h15elI07E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>NFCReaderViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		SQQMO6H0Z+9oqpqXPiCcrW8SYI4=
+		3Qoau6SKwBhXEZosleVCgF4IaH4=
 		</data>
 		<key>NewResultViewController.storyboardc/Info.plist</key>
 		<data>
@@ -242,11 +242,11 @@
 		</data>
 		<key>NewResultViewController.storyboardc/OOa-1R-XQa-view-rh6-d6-xAH.nib</key>
 		<data>
-		P5dD/L/0Yuy7hxjbgQaFifj7jhA=
+		l96KzmyqPnfRwUbZI8VO10CJBf0=
 		</data>
 		<key>NewResultViewController.storyboardc/PLd-hY-cl8-view-nPG-H6-NJv.nib</key>
 		<data>
-		0bsD51Vq/yUwjI+L+iVwUhwItm4=
+		7nUP80T0g8XosKHH+P6BJalYrr8=
 		</data>
 		<key>NewResultViewController.storyboardc/ScanningResultVC.nib</key>
 		<data>
@@ -258,11 +258,11 @@
 		</data>
 		<key>NewResultViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		VPI9TKgBqMWvaw7sYz9Gln7ahXE=
+		KAiBdzaZyyKBYetRW3j2On4NQSE=
 		</data>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
 		<data>
-		9tqJ+sU57rT8HuBRgX59O57cUIA=
+		p7I7T+XdGj+PD/OOkcSGB64Jzbk=
 		</data>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>NfcErrorViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		Hcz4fXVsuw/VAxJrQytmjoq5wvo=
+		76Xhyi2hAWPGvL8uVBfOaB2Tqn8=
 		</data>
 		<key>ResultCell.nib</key>
 		<data>
@@ -290,7 +290,7 @@
 		</data>
 		<key>SelfieCaptureViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		0cidsGXDnQNSbRpDDVO79v3xDpg=
+		BHEqAi4Fc0UAZbYsnp+Py3sSKG8=
 		</data>
 		<key>SettingsCell.nib</key>
 		<data>
@@ -306,12 +306,21 @@
 		</data>
 		<key>SettingsViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		4DK4x7i5DepzMajs714ldHmtt9s=
+		TfVtDFru5B91+ayO9w5HTwq1Rss=
 		</data>
 		<key>VerificationResultCell.nib</key>
 		<data>
 		19a+nuiuUgaZjjE1OD4VIWBs6Go=
 		</data>
+		<key>ar.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Vgf4hclYXKMU9YiWE5dHJyLsDyg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>card_flip.json</key>
 		<data>
 		q+SCcHQZ7WHlUm7qE3ulcWzCSi0=
@@ -320,6 +329,15 @@
 		<data>
 		PccriaoCyxQvED5FeMXo+yWc+2c=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oTHI4zTgy6pdcQOZUyo634aEC58=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>error.json</key>
 		<data>
 		QXunRxU3/yiiQsff4945knfSIyg=
@@ -383,7 +401,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JF3o+MjyNWQyQKyN16vAGg3VN59E3EzvmxxRd8RishU=
+			vDZbbiagJgqwCnGEXzcB+fAfjyaE5IVgTleCH4jBJrY=
 			</data>
 		</dict>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
@@ -474,7 +492,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1x6ocz2Txj76SQYcmm7uHnUeySQLVn/1y7+qUsbKdlw=
+			FidzcRFylGLkS/ONCUtcQmXGCRy8KphRiAgaWR8YZ9o=
 			</data>
 		</dict>
 		<key>Frameworks/libtesseract.framework/Info.plist</key>
@@ -495,7 +513,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			57P0i/PlYJwNRQhReZJWgb3JDzGMC2wQNvodK0ehBBI=
+			0QX9yHAL/uH4zeGJIT6GRvY1qRjXzjXYRBpKOnw8cZ8=
 			</data>
 		</dict>
 		<key>Headers/Box.h</key>
@@ -516,7 +534,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g5SDweBoWWk2qQAx1fHY4nYPVYkPV8kXGRhwrPVoeLY=
+			BVDi60dkBOq5y9jyrQtBU69OqjnKyAaXRlpKzdz6FCo=
 			</data>
 		</dict>
 		<key>Headers/IDVSDK.h</key>
@@ -586,7 +604,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KDfFUifqp83cVmFFm3jJEuOjGcGx8OeHKqVgREfCoJ8=
+			vQw5STyGEJPrifthp2J2bSbRznHGr02Eanjm041IEAc=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Info.plist</key>
@@ -635,7 +653,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5e+r4ZcXzGGY6R8Rmaj14WYDi0ZxuZIDeqoeZmxwB10=
+			U4e1bB1mLUmas1c2ERNcY3FhsaeaEk0OE0teWI5ga6Y=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-ymR-I9-EsV.nib</key>
@@ -649,28 +667,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IEvPC8SoE9KQH7wc+BeTzlvctDCB/sNOkxeDwFHvQXw=
+			S6VHJfDNkIVZZAdsMVKwMUJ0+RhCWPfHTp6DqSev8qo=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Is+AHgVNZg9zUqDFiKkyFR7xrtrejLIYVd2jV3iwxiw=
+			wXUf9RkxVp4473ZvnMONzXuRuCIKkK2wdjSjSrX5jWo=
 			</data>
 		</dict>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gy7xOUWQWefe/yEfff0PPplzfe9BX1YT5DwhrLlbPb0=
+			AjmS7rl0Hg1AsRpJQitFpD0Q0EM8mkCePYylVDsxfNQ=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ltL-of-FyK-view-Xil-9m-NCv.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVMqISwhmmRhN93zkItsoRos7W5JeBKzWZjWT7A4qWw=
+			1lvpHNpmv7k//jY1Phygtw4dzhTNg+ewJw/6tn6ceco=
 			</data>
 		</dict>
 		<key>MobileFaceNet.tflite</key>
@@ -684,42 +702,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G99bsynfFntGrJAr0pZf/CRiPTS6jwRmDM0OB7dGRY4=
+			rC6hW5fN10gUcNF48goxQyjnTSF+tqWWl0MKQJPS3I8=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c8Kt+husI7GGn449KcJGDkZTyey1eJdL3HL2w5DGe8c=
+			ZABZEEci9Mi4fzBjeFXO6MuntZUjFrvx5TJ3SxGgrwg=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zJj7QOaP6K+EREu5kLYfvwBP3tEOJmMkimYzgjzijRc=
+			4j0LXzVck0DaFKVmsZavoduNeUm4MXKIbY0vOSvvuKs=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qGm/Ki42ZVzxOnUgsRLa6h0mL2RhEK8iltenNBPscDk=
+			CMIyva6JV47U0vI/DOM1MGf+LGAdONxgn9azy49741M=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zJj7QOaP6K+EREu5kLYfvwBP3tEOJmMkimYzgjzijRc=
+			4j0LXzVck0DaFKVmsZavoduNeUm4MXKIbY0vOSvvuKs=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CnrgWxf3n1aF2uOPrybDDXFOmLf0QKhCRrk0puDPcck=
+			6dTI82vUGAIPF7CnLzqN/gZ+/5A8wCUd70mhzpVRGaE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -761,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZK7iCPCJ6FdstEPMFTdaGuXm95BMPy0HAF8mB8i+FIE=
+			/RkdLsKTLcgIBLWrvi0EW2tVeWEsluXUCtOi0oXwt+E=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/Info.plist</key>
@@ -789,14 +807,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JiH+/54xq5YK2KugaPVWeKXiLeEa1un773XVzF58rmU=
+			P9HlKWd61D0ZUqC7RfEoctYC4BWkeV8Ah7+V8V5+1g0=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/PLd-hY-cl8-view-nPG-H6-NJv.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bJDEw8norZGSgW2QP6gXPymvuWb0QIvSxvpIP/NodZc=
+			EzmSBSLfDQQue4VveB4A5R2sizZ9VXt9Z0EfXks9O9U=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/ScanningResultVC.nib</key>
@@ -817,14 +835,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fEh8nzhzGsEvAxgJBQEyIfz8D4EBI03UdfO2lESXebA=
+			VXvpnT0lt4YYEWkjAzvu53n1BEdN/QKwuH3g0/0pcOU=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOrICmRvpVIYO7K2UUT4KPM28pXBi8CI9SyQLYddVH4=
+			nGrPFU9JR8L7CcTByOvGCOMmcivByOFseP1HziYzYcE=
 			</data>
 		</dict>
 		<key>NfcErrorViewController.storyboardc/Info.plist</key>
@@ -845,7 +863,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/ZB0FzUw8c7G15X0ecqNusRUYa/XOEixgLTeDosGZlo=
+			/RRfYy5qejnBe5YITPwFKURF+sNTRebmKYLNOpPCYzY=
 			</data>
 		</dict>
 		<key>ResultCell.nib</key>
@@ -873,7 +891,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2RmuwNu2KQChYfkhqOwMkvrROieK+y/jNWwhBZf/E9o=
+			qglxVqWE1/6WAFHo7wq/flOqLhT8frDozEjy4XLoGzU=
 			</data>
 		</dict>
 		<key>SettingsCell.nib</key>
@@ -901,7 +919,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SiVDzvUylH5U4SAdMG66ygAS7NgRQXQOFYIQTVChpi0=
+			odE7RyURU4C3Cpn+R4XxRXjLHEFWzIHKdyX0SMyj7VI=
 			</data>
 		</dict>
 		<key>VerificationResultCell.nib</key>
@@ -910,6 +928,15 @@
 			<data>
 			JJBz0YjNtMrBgGFUIGJL1DLK6hFTWW/D62fYeIc3CGg=
 			</data>
+		</dict>
+		<key>ar.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2VV3SNVBJE6dEp6Cdv0X9ZUVlw6T2jqbuBlRJc96aTc=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>card_flip.json</key>
 		<dict>
@@ -924,6 +951,15 @@
 			<data>
 			sD7cZFmgAJgpuZkyMXYA19CFb00L/zX0EYq+SO6bSTo=
 			</data>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Xqb9qRdeFV6Lsyt4s+RFXG+9/CafjW0mR8aCUznt4ZE=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>error.json</key>
 		<dict>

@@ -306,6 +306,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC6IDVSDK15CustomBTNSelect")
@@ -393,7 +394,7 @@ SWIFT_CLASS("_TtC6IDVSDK9NashidSDK")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NashidSDK * _Nonnull shared;)
 + (NashidSDK * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) void (^ _Nullable scanResultCallback)(NSDictionary<NSString *, id> * _Nonnull, NSString * _Nonnull);
-- (void)initializeSDKWithToken:(NSString * _Nonnull)sdkToken id:(NSString * _Nonnull)sdkId baseUrl:(NSString * _Nonnull)baseUrl employeeEmail:(NSString * _Nonnull)employeeEmail;
+- (void)initializeSDKWithToken:(NSString * _Nonnull)sdkToken id:(NSString * _Nonnull)sdkId baseUrl:(NSString * _Nonnull)baseUrl employeeEmail:(NSString * _Nonnull)employeeEmail languageId:(NSString * _Nonnull)languageId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)configureIntroductionTo:(BOOL)introduction;
