@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name           = 'Nashid_SDK'
-  spec.version        = '1.7.1'
+  spec.version        = '1.8.0'
   spec.summary        = 'Nashid helps you to uniquely identify your users.'
   spec.description    = 'An identity verification tool integrated seamlessly in your application for easy and robust new customers on-boarding.'
   spec.homepage       = 'https://www.nashid.io'
