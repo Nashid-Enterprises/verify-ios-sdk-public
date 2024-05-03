@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.swift_version  = '5.0'
 
   # Update the source URL to use HTTPS for better security
-  spec.source         = { :git => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public.git", :tag => "1.7.1" }
+  spec.source         = { :git => "https://github.com/Nashid-Enterprises/verify-ios-sdk-public.git", :tag => "1.8.0" }
 
   spec.requires_arc   = true
   spec.static_framework = true
