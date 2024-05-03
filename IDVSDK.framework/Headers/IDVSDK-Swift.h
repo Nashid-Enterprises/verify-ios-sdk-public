@@ -399,8 +399,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NashidSDK * 
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)configureIntroductionTo:(BOOL)introduction;
 - (BOOL)isIntroductionEnabled SWIFT_WARN_UNUSED_RESULT;
+- (void)ScanQRStringProcessorWithQrStrValue:(NSString * _Nonnull)qrStrValue;
 - (void)documentScan;
 - (void)passportScan;
+- (void)clearSession;
 @end
 
 
@@ -421,6 +423,7 @@ SWIFT_CLASS("_TtC6IDVSDK26ScanDocumentViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -531,6 +534,7 @@ SWIFT_CLASS("_TtC6IDVSDK27StartScanningViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

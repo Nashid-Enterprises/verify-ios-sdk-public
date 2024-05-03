@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		qM5SFVjvKFzOkMe37UOnu9Jc7ck=
+		W/15MYxijJZw90QwQAFHpm5A5Ng=
 		</data>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/libtesseract.framework/libtesseract</key>
 		<data>
-		3CJS8dx6SoPdeLsMuRTFNGhq1iY=
+		7rv0rW5FQYWKaP5ExMA2OT0CoA8=
 		</data>
 		<key>Headers/Box.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/IDVSDK-Swift.h</key>
 		<data>
-		woJq/LIVYVfSRCiM59hlXG0xawM=
+		OyB2NKC7B5rV70JmBbYRSf4lNcs=
 		</data>
 		<key>Headers/IDVSDK.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		H3dDbnHOQFrcedhivDQa5aMMlME=
+		q90wkSHBiIxXPjx5EbezXwg4eew=
 		</data>
 		<key>LivenessViewController.storyboardc/Info.plist</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>LivenessViewController.storyboardc/NON-EK-peo-view-z2O-9C-ORD.nib</key>
 		<data>
-		XSfHQo7sosPeavFW07N5JjGwQYg=
+		0KkohHV0AUK7za63Mgclk19XbOM=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Main.storyboardc/TJX-zT-qXQ-view-Vmu-5M-JYZ.nib</key>
 		<data>
-		38qJXXJZX9VFvXhZyyH++TiHAXs=
+		seGae56uXNu5D10ZcRu9t7wWHYM=
 		</data>
 		<key>Main.storyboardc/UINavigationController-ymR-I9-EsV.nib</key>
 		<data>
@@ -162,19 +162,19 @@
 		</data>
 		<key>Main.storyboardc/Wme-Be-lQ3-view-NgF-V2-ziB.nib</key>
 		<data>
-		3x4wd+AZsILkTuVJaZBPa4CK1yY=
+		NNMlkq6Rtw4Kcw6QOKTr6TgRqJo=
 		</data>
 		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
 		<data>
-		XzMBqNbb+bTbPAusXG227kLDiuM=
+		8Vjw0+YnliR77apkQzmk9YIqTlk=
 		</data>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<data>
-		pPaZ3u7r5gFxxpVaX0Bs7dMnI+s=
+		BK+5md7Z8U+TIO3pA7Qwamh7VEc=
 		</data>
 		<key>Main.storyboardc/ltL-of-FyK-view-Xil-9m-NCv.nib</key>
 		<data>
-		Y7LVa+7qyKqgBOp8ItveMvzbH10=
+		nVbIcIQnPMS+y613pVrzBSOJMnc=
 		</data>
 		<key>MobileFaceNet.tflite</key>
 		<data>
@@ -182,27 +182,27 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		z0a9k8koTCyFrDEfMeDz6cJDYZQ=
+		2nCzy9+0rdAKYO2j0eowZ2w26oU=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		bdtHFrs5fWuRDadc9iYFMmRhHa8=
+		ALuJ8cP4dGaYTkBfcGMKhKuoOSU=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		VS6kNaE2UeC01oFLh6n0X2oaR4s=
+		ZmX81Lw3Qrk2uuTbwlId6T5orrY=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ENlGaFITK5Tz1bN4wQYUnk1HkHI=
+		L+v26yjXbX6oS1JmSbTIe7HZNvQ=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		VS6kNaE2UeC01oFLh6n0X2oaR4s=
+		ZmX81Lw3Qrk2uuTbwlId6T5orrY=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		au5ir7tgzclOIuX9T7h15elI07E=
+		eBiJV5GxKs9rUZm5+3H8lCtwiT0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>NFCReaderViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		3Qoau6SKwBhXEZosleVCgF4IaH4=
+		sQMCwsIazk8K7dcWYLEhc80znpo=
 		</data>
 		<key>NewResultViewController.storyboardc/Info.plist</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>NewResultViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		KAiBdzaZyyKBYetRW3j2On4NQSE=
+		cJkMCqAiL+vtH34bAZ6JsH2CG6Q=
 		</data>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>SettingsViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		TfVtDFru5B91+ayO9w5HTwq1Rss=
+		iirV6zYSv9eS7KBmmk/qMcXHbwY=
 		</data>
 		<key>VerificationResultCell.nib</key>
 		<data>
@@ -316,7 +316,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vgf4hclYXKMU9YiWE5dHJyLsDyg=
+			XvcaQ1obefB+N2lLqwFPh/onsng=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -333,7 +333,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oTHI4zTgy6pdcQOZUyo634aEC58=
+			+JWZ5w0h6e63GfcXscSs2ayFiOc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -401,7 +401,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vDZbbiagJgqwCnGEXzcB+fAfjyaE5IVgTleCH4jBJrY=
+			2yXib3TMkPp662BnDQCvQaPKKmKoULIKyw5CwMGxAOE=
 			</data>
 		</dict>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
@@ -513,7 +513,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0QX9yHAL/uH4zeGJIT6GRvY1qRjXzjXYRBpKOnw8cZ8=
+			s2JS2zFRinQ91Yc35cIEI03MQR5W0+vfkndCWMj7x34=
 			</data>
 		</dict>
 		<key>Headers/Box.h</key>
@@ -534,7 +534,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BVDi60dkBOq5y9jyrQtBU69OqjnKyAaXRlpKzdz6FCo=
+			5uNBLphZQWYBUVUGnlHb3Lb5virfnqS35dOURyna1x4=
 			</data>
 		</dict>
 		<key>Headers/IDVSDK.h</key>
@@ -604,7 +604,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vQw5STyGEJPrifthp2J2bSbRznHGr02Eanjm041IEAc=
+			5vTM0/hDy0usLeZ0ULiawqZXtvzFHRRmdPtp5ajsPYM=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Info.plist</key>
@@ -653,7 +653,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U4e1bB1mLUmas1c2ERNcY3FhsaeaEk0OE0teWI5ga6Y=
+			dTVyfbVSrsTBxT+Z+N4ftU/Ax4RJHUp3EGUvOrpEMfA=
 			</data>
 		</dict>
 		<key>Main.storyboardc/UINavigationController-ymR-I9-EsV.nib</key>
@@ -667,28 +667,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S6VHJfDNkIVZZAdsMVKwMUJ0+RhCWPfHTp6DqSev8qo=
+			pBWjIk89QBuRtTJm0hCWZS8ElRrbfzIgD+jDwDCp3/8=
 			</data>
 		</dict>
 		<key>Main.storyboardc/Z9H-kn-UNL-view-jOw-zI-1eB.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wXUf9RkxVp4473ZvnMONzXuRuCIKkK2wdjSjSrX5jWo=
+			h8wLnjqNHap2AhvixvREwu1ZHu6dJyeTgsPGHwJfdQE=
 			</data>
 		</dict>
 		<key>Main.storyboardc/dh9-nh-Cw6-view-osX-Ju-yfJ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AjmS7rl0Hg1AsRpJQitFpD0Q0EM8mkCePYylVDsxfNQ=
+			xccEf1KwXl/BBLq7B28+kCCc+bckJtIFT/L3i4Vbhzs=
 			</data>
 		</dict>
 		<key>Main.storyboardc/ltL-of-FyK-view-Xil-9m-NCv.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1lvpHNpmv7k//jY1Phygtw4dzhTNg+ewJw/6tn6ceco=
+			dlrp8bzWstTfLYym7zmkrXSaad3ljXLo21c/s/UOp7k=
 			</data>
 		</dict>
 		<key>MobileFaceNet.tflite</key>
@@ -702,42 +702,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rC6hW5fN10gUcNF48goxQyjnTSF+tqWWl0MKQJPS3I8=
+			XFFPR76bEZmX9hSq3cuT4xn1p0pyxF4/8jwgavdHxTc=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZABZEEci9Mi4fzBjeFXO6MuntZUjFrvx5TJ3SxGgrwg=
+			88kVF6YuncUr9HE6HCBZfw5ZO5YtZ654YwAQedFqE3w=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4j0LXzVck0DaFKVmsZavoduNeUm4MXKIbY0vOSvvuKs=
+			uY0mrsQ6LMgl6K1nkiUG9/0cuUlWDS9uACueSLjX66U=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CMIyva6JV47U0vI/DOM1MGf+LGAdONxgn9azy49741M=
+			P7ZyG9vtgSKiiJ0rQbKaXYy/bATSjo0fDsgnLKKmFPM=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4j0LXzVck0DaFKVmsZavoduNeUm4MXKIbY0vOSvvuKs=
+			uY0mrsQ6LMgl6K1nkiUG9/0cuUlWDS9uACueSLjX66U=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6dTI82vUGAIPF7CnLzqN/gZ+/5A8wCUd70mhzpVRGaE=
+			Tbr1GfEEeQ0R883V1/B5WnOp5SJzDalgRyNiRpc+t1A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -779,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/RkdLsKTLcgIBLWrvi0EW2tVeWEsluXUCtOi0oXwt+E=
+			gGbmb/o7/rx2G7HOrDoW4GP8ELjf4DJj0VXUs5BYrxM=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/Info.plist</key>
@@ -835,7 +835,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VXvpnT0lt4YYEWkjAzvu53n1BEdN/QKwuH3g0/0pcOU=
+			1SpC0iETsEOXamEqmYmsq6onj+Cx9cVfT9uY4tVc0Ng=
 			</data>
 		</dict>
 		<key>NewResultViewController.storyboardc/tsQ-oL-S9B-view-WFa-TR-YsX.nib</key>
@@ -919,7 +919,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			odE7RyURU4C3Cpn+R4XxRXjLHEFWzIHKdyX0SMyj7VI=
+			ig5ViW0cCyNZy0VDVA4dE/Y1WL0BeIn8qie77vpe3Jo=
 			</data>
 		</dict>
 		<key>VerificationResultCell.nib</key>
@@ -933,7 +933,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2VV3SNVBJE6dEp6Cdv0X9ZUVlw6T2jqbuBlRJc96aTc=
+			ePn2taJJArgaxH5vZmynqVPUTJnn4sBavME5app+y3g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -956,7 +956,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xqb9qRdeFV6Lsyt4s+RFXG+9/CafjW0mR8aCUznt4ZE=
+			0HU6bVEOkI/Qu+o/8VTspk+e37Hp8LvJSIGPccb5kG0=
 			</data>
 			<key>optional</key>
 			<true/>
