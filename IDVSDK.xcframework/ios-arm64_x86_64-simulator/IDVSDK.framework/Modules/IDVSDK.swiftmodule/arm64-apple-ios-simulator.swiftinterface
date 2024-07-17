@@ -1,0 +1,1697 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name IDVSDK
+import AVFoundation
+import Accelerate
+import Alamofire
+import AudioToolbox
+import Combine
+import CommonCrypto
+import CoreGraphics
+import CoreImage
+import CoreLocation
+import CoreML
+import CoreNFC
+import CoreVideo
+import CryptoKit
+import CryptoTokenKit
+import DeveloperToolsSupport
+import Foundation
+@_exported import IDVSDK
+import ImageIO
+import Lottie
+import OpenSSL
+import SDWebImage
+import Swift
+import SwiftUI
+import UIKit
+import VideoToolbox
+import Vision
+import _Concurrency
+import _CoreNFC_UIKit
+import _StringProcessing
+import _SwiftConcurrencyShims
+import libtesseract
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NashidSDK : ObjectiveC.NSObject {
+  @objc public static let shared: IDVSDK.NashidSDK
+  @objc public var scanResultCallback: (([Swift.String : Any], Swift.String) -> Swift.Void)?
+  @objc public func initializeSDK(token sdkToken: Swift.String, id sdkId: Swift.String, baseUrl: Swift.String, employeeEmail: Swift.String, languageId: Swift.String)
+  @objc public func configureIntroduction(to introduction: Swift.Bool)
+  @objc public func isIntroductionEnabled() -> Swift.Bool
+  @objc public func ScanQRStringProcessor(qrStrValue: Swift.String)
+  public static func dismissAllViewControllers()
+  @objc public func documentScan()
+  @objc public func passportScan()
+  @objc public func clearSession()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class SecurityInfo {
+  public func getObjectIdentifier() -> Swift.String
+  public func getProtocolOIDString() -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup4 : IDVSDK.DataGroup {
+  public var fullNameArabic: Swift.String?
+  public var fullNameEnglish: Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup2 : IDVSDK.DataGroup {
+  public var nrImages: Swift.Int {
+    get
+  }
+  public var versionNumber: Swift.Int {
+    get
+  }
+  public var lengthOfRecord: Swift.Int {
+    get
+  }
+  public var numberOfFacialImages: Swift.Int {
+    get
+  }
+  public var facialRecordDataLength: Swift.Int {
+    get
+  }
+  public var nrFeaturePoints: Swift.Int {
+    get
+  }
+  public var gender: Swift.Int {
+    get
+  }
+  public var eyeColor: Swift.Int {
+    get
+  }
+  public var hairColor: Swift.Int {
+    get
+  }
+  public var featureMask: Swift.Int {
+    get
+  }
+  public var expression: Swift.Int {
+    get
+  }
+  public var poseAngle: Swift.Int {
+    get
+  }
+  public var poseAngleUncertainty: Swift.Int {
+    get
+  }
+  public var faceImageType: Swift.Int {
+    get
+  }
+  public var imageDataType: Swift.Int {
+    get
+  }
+  public var imageWidth: Swift.Int {
+    get
+  }
+  public var imageHeight: Swift.Int {
+    get
+  }
+  public var imageColorSpace: Swift.Int {
+    get
+  }
+  public var sourceType: Swift.Int {
+    get
+  }
+  public var deviceType: Swift.Int {
+    get
+  }
+  public var quality: Swift.Int {
+    get
+  }
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  public var faceImage: UIKit.UIImage?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroupParser {
+  @objc deinit
+}
+public func rotate90PixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, factor: Swift.UInt8)
+public func rotate90PixelBuffer(_ srcPixelBuffer: CoreVideo.CVPixelBuffer, factor: Swift.UInt8) -> CoreVideo.CVPixelBuffer?
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InstructionsCell : UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class NotImplementedDG : IDVSDK.DataGroup {
+  @objc deinit
+}
+extension CoreML.MLModel {
+  public func imageConstraint(forInput inputName: Swift.String) -> CoreML.MLImageConstraint?
+}
+@available(iOS 13.0, tvOS 13.0, *)
+extension CoreML.MLModel {
+  public func featureValue(fromUIImage image: UIKit.UIImage, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
+}
+@available(iOS 13.0, tvOS 13.0, macOS 10.15, *)
+extension CoreML.MLModel {
+  public func featureValue(fromCGImage image: CoreGraphics.CGImage, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
+  public func featureValue(fromImageAt url: Foundation.URL, forInput inputName: Swift.String, orientation: ImageIO.CGImagePropertyOrientation = .up, options: [CoreML.MLFeatureValue.ImageOption : Any]? = nil) -> CoreML.MLFeatureValue?
+}
+public struct SettingsOption : Swift.Codable {
+  public var scan: Swift.Bool
+  public var nfc: Swift.Bool
+  public var liveness: Swift.Bool
+  public var facialMatching: Swift.Bool
+  public var documentExpired: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SettingsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension IDVSDK.SettingsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class StartScanningViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup8 : IDVSDK.DataGroup {
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DocTypeEnum : Swift.String {
+  case TD1
+  case TD2
+  case OTHER
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup1 : IDVSDK.DataGroup {
+  public var elements: [Swift.String : Swift.String] {
+    get
+  }
+  public var idNumber: Swift.String?
+  public var issueDate: Swift.String?
+  public var expiryDate: Swift.String?
+  public var placeOfIssueEnglish: Swift.String?
+  public var placeOfIssueArabic: Swift.String?
+  @objc deinit
+}
+@available(iOS 15, *)
+public class BACHandler {
+  public var ksenc: [Swift.UInt8]
+  public var ksmac: [Swift.UInt8]
+  public var kifd: [Swift.UInt8]
+  public init()
+  public init(tagReader: IDVSDK.TagReader)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String) async throws
+  #endif
+  public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationInfo : IDVSDK.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class SignatureView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var isEmpty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesMoved(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touch: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) open func clear()
+  @_Concurrency.MainActor(unsafe) open var signature: UIKit.UIImage? {
+    get
+  }
+  @objc deinit
+}
+public func binToHexRep(_ val: [Swift.UInt8], asArray: Swift.Bool = false) -> Swift.String
+public func binToHexRep(_ val: Swift.UInt8) -> Swift.String
+public func binToHex(_ val: Swift.UInt8) -> Swift.Int
+public func binToHex(_ val: [Swift.UInt8]) -> Swift.UInt64
+public func binToHex(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.UInt64
+public func hexToBin(_ val: Swift.UInt64) -> [Swift.UInt8]
+public func binToInt(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.Int
+public func binToInt(_ val: [Swift.UInt8]) -> Swift.Int
+public func intToBin(_ data: Swift.Int, pad: Swift.Int = 2) -> [Swift.UInt8]
+public func hexRepToBin(_ val: Swift.String) -> [Swift.UInt8]
+public func xor(_ kifd: [Swift.UInt8], _ response_kicc: [Swift.UInt8]) -> [Swift.UInt8]
+public func generateRandomUInt8Array(_ size: Swift.Int) -> [Swift.UInt8]
+public func pad(_ toPad: [Swift.UInt8], blockSize: Swift.Int) -> [Swift.UInt8]
+public func unpad(_ tounpad: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func mac(algoName: IDVSDK.SecureMessagingSupportedAlgorithms, key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func desMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func aesMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func wrapDO(b: Swift.UInt8, arr: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func unwrapDO(tag: Swift.UInt8, wrappedData: [Swift.UInt8]) throws -> [Swift.UInt8]
+public func intToBytes(val: Swift.Int, removePadding: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func oidToBytes(oid: Swift.String, replaceTag: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+public enum DocumentType : Swift.String {
+  case NONE
+  case ID
+  case PS
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup7 : IDVSDK.DataGroup {
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup14 : IDVSDK.DataGroup {
+  public var securityInfos: [IDVSDK.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+public enum PACEMappingType {
+  case GM
+  case IM
+  case CAM
+  public static func == (a: IDVSDK.PACEMappingType, b: IDVSDK.PACEMappingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class PACEInfo : IDVSDK.SecurityInfo {
+  public static let PARAM_ID_GFP_1024_160: Swift.Int
+  public static let PARAM_ID_GFP_2048_224: Swift.Int
+  public static let PARAM_ID_GFP_2048_256: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P521_R1: Swift.Int
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getVersion() -> Swift.Int
+  public func getParameterId() -> Swift.Int?
+  public func getParameterSpec() throws -> Swift.Int32
+  public func getMappingType() throws -> IDVSDK.PACEMappingType
+  public func getKeyAgreementAlgorithm() throws -> Swift.String
+  public func getCipherAlgorithm() throws -> Swift.String
+  public func getDigestAlgorithm() throws -> Swift.String
+  public func getKeyLength() throws -> Swift.Int
+  public func createMappingKey() throws -> Swift.OpaquePointer
+  public static func getParameterSpec(stdDomainParam: Swift.Int) throws -> Swift.Int32
+  public static func toMappingType(oid: Swift.String) throws -> IDVSDK.PACEMappingType
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toDigestAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+@available(iOS 15, *)
+public class ChipAuthenticationHandler {
+  public init(dg14: IDVSDK.DataGroup14, tagReader: IDVSDK.TagReader)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func doChipAuthentication() async throws
+  #endif
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ActiveAuthenticationInfo : IDVSDK.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getSignatureAlgorithmOIDString() -> Swift.String?
+  @objc deinit
+}
+public enum EngineMode : libtesseract.TessOcrEngineMode.RawValue {
+  case tesseractOnly
+  case lstmOnly
+  case tesseractLstmCombined
+  public init?(rawValue: libtesseract.TessOcrEngineMode.RawValue)
+  public typealias RawValue = libtesseract.TessOcrEngineMode.RawValue
+  public var rawValue: libtesseract.TessOcrEngineMode.RawValue {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup3 : IDVSDK.DataGroup {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup13 : IDVSDK.DataGroup {
+  public var sponsorRelationship: Swift.String?
+  public var sponsorNumber: Swift.String?
+  public var sponsorIssueDate: Swift.String?
+  public var sponsorExpiryDate: Swift.String?
+  @objc deinit
+}
+public enum LogLevel : Swift.Int, Swift.CaseIterable {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [IDVSDK.LogLevel]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [IDVSDK.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Log {
+  public static var logLevel: IDVSDK.LogLevel
+  public static var storeLogs: Swift.Bool
+  public static var logData: [Swift.String]
+  public class func verbose(_ msg: @autoclosure () -> Swift.String)
+  public class func debug(_ msg: @autoclosure () -> Swift.String)
+  public class func info(_ msg: @autoclosure () -> Swift.String)
+  public class func warning(_ msg: @autoclosure () -> Swift.String)
+  public class func error(_ msg: @autoclosure () -> Swift.String)
+  public class func clearStoredLogs()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup6 : IDVSDK.DataGroup {
+  public var dateOfBirth: Swift.String?
+  public var countryOfBirthArabic: Swift.String?
+  public var placeOfBirthEnglish: Swift.String?
+  public var nationalityArabic: Swift.String?
+  public var genderArabic: Swift.String?
+  public var nationalityEnglish: Swift.String?
+  public var genderEnglish: Swift.String?
+  @objc deinit
+}
+public enum PassportAuthenticationStatus {
+  case notDone
+  case success
+  case failed
+  public static func == (a: IDVSDK.PassportAuthenticationStatus, b: IDVSDK.PassportAuthenticationStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class NFCPassportModel {
+  public var documentType: Swift.String {
+    get
+  }
+  public var documentSubType: Swift.String {
+    get
+  }
+  public var documentNumber: Swift.String {
+    get
+  }
+  public var issuingAuthority: Swift.String {
+    get
+  }
+  public var documentExpiryDate: Swift.String {
+    get
+  }
+  public var dateOfBirth: Swift.String {
+    get
+  }
+  public var gender: Swift.String {
+    get
+  }
+  public var nationality: Swift.String {
+    get
+  }
+  public var passportNumber: Swift.String {
+    get
+  }
+  public var lastName: Swift.String {
+    get
+  }
+  public var firstName: Swift.String {
+    get
+  }
+  public var passportMRZ: Swift.String {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var residenceAddress: Swift.String? {
+    get
+  }
+  public var phoneNumber: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
+    get
+  }
+  public var documentSigningCertificate: IDVSDK.X509Wrapper? {
+    get
+  }
+  public var countrySigningCertificate: IDVSDK.X509Wrapper? {
+    get
+  }
+  public var LDSVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  public var certificateValidto: Swift.String {
+    get
+  }
+  public var certificateValidfrom: Swift.String {
+    get
+  }
+  public var signatureAlgorithm: Swift.String {
+    get
+  }
+  public var dataGroupsAvailable: [IDVSDK.DataGroupId] {
+    get
+  }
+  public var dataGroupsRead: [IDVSDK.DataGroupId : IDVSDK.DataGroup] {
+    get
+  }
+  public var dataGroupHashes: [IDVSDK.DataGroupId : IDVSDK.DataGroupHash] {
+    get
+  }
+  public var cardAccess: IDVSDK.CardAccess? {
+    get
+  }
+  public var BACStatus: IDVSDK.PassportAuthenticationStatus {
+    get
+  }
+  public var PACEStatus: IDVSDK.PassportAuthenticationStatus {
+    get
+  }
+  public var chipAuthenticationStatus: IDVSDK.PassportAuthenticationStatus {
+    get
+  }
+  public var passportCorrectlySigned: Swift.Bool {
+    get
+  }
+  public var documentSigningCertificateVerified: Swift.Bool {
+    get
+  }
+  public var passportDataNotTampered: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationPassed: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationChallenge: [Swift.UInt8] {
+    get
+  }
+  public var activeAuthenticationSignature: [Swift.UInt8] {
+    get
+  }
+  public var verificationErrors: [any Swift.Error] {
+    get
+  }
+  public var isPACESupported: Swift.Bool {
+    get
+  }
+  public var isChipAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public var passportImage: UIKit.UIImage? {
+    get
+  }
+  public var signatureImage: UIKit.UIImage? {
+    get
+  }
+  public var activeAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public init()
+  public init(from dump: [Swift.String : Swift.String])
+  public func addDataGroup(_ id: IDVSDK.DataGroupId, dataGroup: IDVSDK.DataGroup)
+  public func getDataGroup(_ id: IDVSDK.DataGroupId) -> IDVSDK.DataGroup?
+  public func dumpPassportData(selectedDataGroups: [IDVSDK.DataGroupId], includeActiveAuthenticationData: Swift.Bool = false) -> [Swift.String : Swift.String]
+  public func getHashesForDatagroups(hashAlgorythm: Swift.String) -> [IDVSDK.DataGroupId : [Swift.UInt8]]
+  public func verifyPassport(masterListURL: Foundation.URL?, useCMSVerification: Swift.Bool = false)
+  public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
+  @objc deinit
+}
+extension UIKit.UIImage {
+  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
+  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
+  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomImgBTN : UIKit.UIButton {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomFormBTN : UIKit.UIButton {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomFormBTNs : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomBTNSelect : UIKit.UIButton {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FontManager {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SelectOptionViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func startIDCardVerificationClicked()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func startPassportVerificationClicked()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension IDVSDK.SelectOptionViewController : IDVSDK.DialCountriesControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public func didSelected(with country: IDVSDK.Country)
+}
+public enum ResultIteratorLevel : libtesseract.TessPageIteratorLevel.RawValue {
+  case block
+  case paragraph
+  case textline
+  case word
+  case symbol
+  public var tesseractLevel: libtesseract.TessPageIteratorLevel {
+    get
+  }
+  public init?(rawValue: libtesseract.TessPageIteratorLevel.RawValue)
+  public typealias RawValue = libtesseract.TessPageIteratorLevel.RawValue
+  public var rawValue: libtesseract.TessPageIteratorLevel.RawValue {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateType {
+  case documentSigningCertificate
+  case issuerSigningCertificate
+  public static func == (a: IDVSDK.CertificateType, b: IDVSDK.CertificateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateItem : Swift.String {
+  case fingerprint
+  case issuerName
+  case subjectName
+  case serialNumber
+  case signatureAlgorithm
+  case publicKeyAlgorithm
+  case notBefore
+  case notAfter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class X509Wrapper {
+  final public let cert: Swift.OpaquePointer
+  public init?(with cert: Swift.OpaquePointer?)
+  public func getItemsAsDict() -> [IDVSDK.CertificateItem : Swift.String]
+  public func certToPEM() -> Swift.String
+  public func getFingerprint() -> Swift.String?
+  public func getNotBeforeDate() -> Swift.String?
+  public func getNotAfterDate() -> Swift.String?
+  public func getSerialNumber() -> Swift.String?
+  public func getSignatureAlgorithm() -> Swift.String?
+  public func getPublicKeyAlgorithm() -> Swift.String?
+  public func getIssuerName() -> Swift.String?
+  public func getSubjectName() -> Swift.String?
+  @objc deinit
+}
+public struct CLBoundingBox {
+  public let classIndex: Swift.Int
+  public let score: Swift.Float
+  public let rect: CoreFoundation.CGRect
+  public init(classIndex: Swift.Int, score: Swift.Float, rect: CoreFoundation.CGRect)
+}
+public func IOU(_ a: CoreFoundation.CGRect, _ b: CoreFoundation.CGRect) -> Swift.Float
+public func nonMaxSuppression(boundingBoxes: [IDVSDK.CLBoundingBox], iouThreshold: Swift.Float, maxBoxes: Swift.Int) -> [Swift.Int]
+public func nonMaxSuppression(boundingBoxes: [IDVSDK.CLBoundingBox], indices: [Swift.Int], iouThreshold: Swift.Float, maxBoxes: Swift.Int) -> [Swift.Int]
+public func nonMaxSuppressionMultiClass(numClasses: Swift.Int, boundingBoxes: [IDVSDK.CLBoundingBox], scoreThreshold: Swift.Float, iouThreshold: Swift.Float, maxPerClass: Swift.Int, maxTotal: Swift.Int) -> [Swift.Int]
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SettingsCell : UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Foundation.Bundle : IDVSDK.LanguageModelDataSource {
+  public var pathToTrainedData: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup15 : IDVSDK.DataGroup {
+  public var rsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  public var ecdsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  @objc deinit
+}
+extension UIKit.UIImage {
+  @nonobjc public func resized(to newSize: CoreFoundation.CGSize, scale: CoreFoundation.CGFloat = 1) -> UIKit.UIImage
+  @nonobjc public func rotated(by degrees: CoreFoundation.CGFloat, keepSize: Swift.Bool = true) -> UIKit.UIImage
+}
+@available(iOS 15, *)
+public class PACEHandler {
+  public init(cardAccess: IDVSDK.CardAccess, tagReader: IDVSDK.TagReader) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func doPACE(mrzKey: Swift.String) async throws
+  #endif
+  @objc deinit
+}
+public class QKMRZParser {
+  public init(ocrCorrection: Swift.Bool = false)
+  public func parse(mrzLines: [Swift.String]) -> IDVSDK.NashidResults?
+  public func parse(mrzString: Swift.String) -> IDVSDK.NashidResults?
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public class ASN1Item : Swift.CustomDebugStringConvertible {
+  public init(line: Swift.String)
+  public func getChild(_ child: Swift.Int) -> IDVSDK.ASN1Item?
+  public func getNumberOfChildren() -> Swift.Int
+  public var debugDescription: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public class SimpleASN1DumpParser {
+  public init()
+  public func parse(data: Foundation.Data) throws -> IDVSDK.ASN1Item
+  public func test()
+  @objc deinit
+}
+public protocol DialCountriesControllerDelegate : AnyObject {
+  func didSelected(with country: IDVSDK.Country)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DialCountriesController : UIKit.UITableViewController, UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any IDVSDK.DialCountriesControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) public init(locale: Foundation.Locale)
+  @_Concurrency.MainActor(unsafe) public func show(vc: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc public func updateSearchResults(for searchController: UIKit.UISearchController)
+  @objc deinit
+}
+@available(iOS 13.0, tvOS 13.0, macOS 10.15, *)
+extension Combine.Publisher where Self.Output : CoreML.MLFeatureProvider {
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.Map<Self, Swift.Result<any CoreML.MLFeatureProvider, any Swift.Error>>
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.CompactMap<Self, any CoreML.MLFeatureProvider>
+  public func prediction(model: CoreML.MLModel) -> Combine.Publishers.TryMap<Self, (any CoreML.MLFeatureProvider)?>
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup9 : IDVSDK.DataGroup {
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DataGroupId : Swift.Int, Swift.CaseIterable {
+  case COM
+  case DG1
+  case DG2
+  case DG3
+  case DG4
+  case DG5
+  case DG6
+  case DG7
+  case DG8
+  case DG9
+  case DG10
+  case DG11
+  case DG12
+  case DG13
+  case DG14
+  case DG15
+  case DG16
+  case SOD
+  case Unknown
+  public func getName() -> Swift.String
+  public static func getIDFromName(name: Swift.String) -> IDVSDK.DataGroupId
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [IDVSDK.DataGroupId]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [IDVSDK.DataGroupId] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CoreML.MLMultiArray {
+  @nonobjc public func reshaped(to dimensions: [Swift.Int]) throws -> CoreML.MLMultiArray
+  @nonobjc public func transposed(to order: [Swift.Int]) throws -> CoreML.MLMultiArray
+}
+public struct RecognizedBlock {
+  public var text: Swift.String
+  public var boundingBox: CoreFoundation.CGRect
+  public var confidence: Swift.Float
+}
+public protocol LanguageModelDataSource {
+  var pathToTrainedData: Swift.String { get }
+}
+public enum SecureMessagingSupportedAlgorithms {
+  case DES
+  case AES
+  public static func == (a: IDVSDK.SecureMessagingSupportedAlgorithms, b: IDVSDK.SecureMessagingSupportedAlgorithms) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, *)
+public class SecureMessaging {
+  public init(encryptionAlgorithm: IDVSDK.SecureMessagingSupportedAlgorithms = .DES, ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
+  @objc deinit
+}
+extension Swift.Array where Element : Swift.Comparable {
+  public func argmax() -> (Swift.Int, Element)?
+  public func argsort(by areInIncreasingOrder: (Element, Element) -> Swift.Bool) -> [Swift.Array<Element>.Index]
+  public func gather(indices: [Swift.Array<Element>.Index]) -> [Element]
+}
+public protocol ScannerViewDelegate : AnyObject {
+  func ScannerView(_ scannerView: IDVSDK.ScannerViews, didFind scanResult: IDVSDK.ScanResult)
+  func ErrorHide(isHide: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class ScannerViews : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var isScannedsuccess: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var isScanning: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var vibrateOnResult: Swift.Bool
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any IDVSDK.ScannerViewDelegate)?
+  @_Concurrency.MainActor(unsafe) public var cutoutRect: CoreFoundation.CGRect {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func startScanning()
+  @_Concurrency.MainActor(unsafe) public func stopScanning()
+}
+extension IDVSDK.ScannerViews : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class CardAccess {
+  public var securityInfos: [IDVSDK.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+public enum AppStoryboard : Swift.String {
+  case Main
+  case FaceValidationViewController
+  case LivenessViewController
+  case NFCReaderViewController
+  case NewResultViewController
+  case SelfieCaptureViewController
+  case SettingsViewController
+  case NfcErrorViewController
+  public var instance: UIKit.UIStoryboard {
+    get
+  }
+  public func viewController<T>(viewControllerClass: T.Type, function: Swift.String = #function, line: Swift.Int = #line, file: Swift.String = #file) -> T where T : UIKit.UIViewController
+  public func initialViewController() -> UIKit.UIViewController?
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ScanDocumentViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var selectedDocumentType: IDVSDK.DocumentType?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) public func SetSubViews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension IDVSDK.ScanDocumentViewController : IDVSDK.ScannerViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func ErrorHide(isHide: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func ScannerView(_ scannerView: IDVSDK.ScannerViews, didFind scanResult: IDVSDK.ScanResult)
+}
+extension IDVSDK.ScanDocumentViewController {
+  @_Concurrency.MainActor(unsafe) public func setupLayout()
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCViewDisplayMessage {
+  case requestPresentPassport
+  case authenticatingWithPassport(Swift.Int)
+  case readingDataGroupProgress(IDVSDK.DataGroupId, Swift.Int)
+  case error(IDVSDK.NFCPassportReaderError)
+  case successfulRead
+}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.NFCViewDisplayMessage {
+  public var description: Swift.String {
+    get
+  }
+}
+public func argmax(_ array: [Swift.Float], count: Swift.Int? = nil) -> (Swift.Int, Swift.Float)
+public func argmax(_ ptr: Swift.UnsafePointer<Swift.Float>, count: Swift.Int, stride: Swift.Int = 1) -> (Swift.Int, Swift.Float)
+public func argmax(_ array: [Swift.Double], count: Swift.Int? = nil) -> (Swift.Int, Swift.Double)
+public func argmax(_ ptr: Swift.UnsafePointer<Swift.Double>, count: Swift.Int, stride: Swift.Int = 1) -> (Swift.Int, Swift.Double)
+public func clamp<T>(_ x: T, min: T, max: T) -> T where T : Swift.Comparable
+public func sigmoid(_ x: Swift.Float) -> Swift.Float
+public func sigmoid(_ x: Swift.Double) -> Swift.Double
+public func sigmoid(_ x: Swift.UnsafeMutablePointer<Swift.Float>, count: Swift.Int)
+public func sigmoid(_ x: Swift.UnsafeMutablePointer<Swift.Double>, count: Swift.Int)
+public func softmax(_ x: [Swift.Float]) -> [Swift.Float]
+@_hasMissingDesignatedInitializers @available(iOS 15, *)
+public class TagReader {
+  @objc deinit
+}
+@available(iOS 13, *)
+public struct ResponseAPDU {
+  public var data: [Swift.UInt8]
+  public var sw1: Swift.UInt8
+  public var sw2: Swift.UInt8
+  public init(data: [Swift.UInt8], sw1: Swift.UInt8, sw2: Swift.UInt8)
+}
+@available(iOS 13, macOS 10.15, *)
+public struct DataGroupHash {
+  public var id: Swift.String
+  public var sodHash: Swift.String
+  public var computedHash: Swift.String
+  public var match: Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class GlobalStateManager {
+  public static var nashidResults: IDVSDK.NashidResults?
+  public static var kDocNumber: Swift.String
+  public static var mrzOriginal: Swift.String
+  public static var kDOB: Swift.String
+  public static var kExpire: Swift.String
+  public static var documentType: Swift.String
+  public static var faceImage: UIKit.UIImage?
+  public static var faceCropImage: UIKit.UIImage?
+  public static var isSdkConfig: Swift.Bool
+  public static var isIdentityCard: Swift.Bool
+  public static var backSide: UIKit.UIImage?
+  public static var frontSide: UIKit.UIImage?
+  public static var cropBackSide: UIKit.UIImage?
+  public static var cropFrontSide: UIKit.UIImage?
+  public static var faceBeforeRemoveBackgroundLiveness: UIKit.UIImage?
+  public static var faceLiveness: UIKit.UIImage?
+  public static var faceNFC: UIKit.UIImage?
+  public static var signImage: UIKit.UIImage?
+  public static var qrCodeString: Swift.String
+  public class func resetStaticVar()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SdkConfig {
+  public static var sdkToken: Swift.String
+  public static var sdkId: Swift.String
+  public static var baseUrl: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup {
+  public var datagroupType: IDVSDK.DataGroupId
+  public var body: [Swift.UInt8] {
+    get
+  }
+  public var data: [Swift.UInt8] {
+    get
+  }
+  public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
+  @objc deinit
+}
+extension UIKit.UIImage {
+  public func pixelBuffer() -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray() -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormatType: Darwin.OSType, colorSpace: CoreGraphics.CGColorSpace, alphaInfo: CoreGraphics.CGImageAlphaInfo) -> CoreVideo.CVPixelBuffer?
+}
+extension UIKit.UIImage {
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer)
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup5 : IDVSDK.DataGroup {
+  @objc deinit
+}
+extension CoreGraphics.CGImage {
+  @nonobjc public func toByteArrayRGBA() -> [Swift.UInt8]
+  @nonobjc public class func fromByteArrayRGBA(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int) -> CoreGraphics.CGImage?
+  @nonobjc public class func fromByteArrayGray(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int) -> CoreGraphics.CGImage?
+}
+public struct Country : Swift.Decodable {
+  public var flag: Swift.String {
+    get
+  }
+  public let code: Swift.String
+  public var name: Swift.String {
+    get
+  }
+  public var title: Swift.String {
+    get
+  }
+  public let dialCode: Swift.String?
+  public static func getCurrentCountry() -> IDVSDK.Country?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NashidResults : Swift.Codable {
+  public let documentType: Swift.String
+  public let countryCode: Swift.String
+  public let surnames: Swift.String
+  public let givenNames: Swift.String
+  public let documentNumber: Swift.String
+  public let nationalityCountryCode: Swift.String
+  public let birthdate: Foundation.Date?
+  public let sex: Swift.String?
+  public let expiryDate: Foundation.Date?
+  public let personalNumber: Swift.String
+  public let personalNumber2: Swift.String?
+  public let isDocumentNumberValid: Swift.Bool
+  public let isBirthdateValid: Swift.Bool
+  public let isExpiryDateValid: Swift.Bool
+  public let isPersonalNumberValid: Swift.Bool?
+  public let allCheckDigitsValid: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public func createPixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormat: Darwin.OSType) -> CoreVideo.CVPixelBuffer?
+public func createPixelBuffer(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func _createPixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormat: Darwin.OSType) -> CoreVideo.CVPixelBuffer?
+extension CoreVideo.CVBuffer {
+  public func copyToMetalCompatible() -> CoreVideo.CVPixelBuffer?
+  public func deepCopy(withAttributes attributes: [Swift.String : Any] = [:]) -> CoreVideo.CVPixelBuffer?
+}
+@_hasMissingDesignatedInitializers public class DataModel {
+  public static func getFormatedDate(myDate: Foundation.Date) -> Swift.String
+  public static func getDisplayDate(myDate: Foundation.Date) -> Swift.String
+  public static func getCurrentDate() -> Swift.String
+  public static func getSettingData() -> IDVSDK.SettingsOption?
+  public static func getUsersDefaultDocumentType() -> Swift.String?
+  public static func getDocumentTypeTitle() -> Swift.String
+  public static func isIdentityDocument() -> Swift.Bool
+  public static func isValidDocumentShown(doc: Swift.String) -> Swift.Bool
+  public static func getMRZKey() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UserModel {
+  public static var MRZResult: IDVSDK.ScanResult?
+  public static var PassportResult: IDVSDK.NFCPassportModel?
+  public static var CapturedImg: UIKit.UIImage!
+  public static var FaceCompareResult: CoreFoundation.CGFloat!
+  public static var HomeVC: UIKit.UIViewController!
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class OpenSSLUtils {
+  public static func getOpenSSLError() -> Swift.String
+  @available(iOS 13, macOS 10.15, *)
+  public static func getPublicKeyData(from key: Swift.OpaquePointer) -> [Swift.UInt8]?
+  @available(iOS 13, macOS 10.15, *)
+  public static func decodePublicKeyFromBytes(pubKeyData: [Swift.UInt8], params: Swift.OpaquePointer) -> Swift.OpaquePointer?
+  public static func computeSharedSecret(privateKeyPair: Swift.OpaquePointer, publicKey: Swift.OpaquePointer) -> [Swift.UInt8]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup11 : IDVSDK.DataGroup {
+  public var fullName: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
+    get
+  }
+  public var dateOfBirth: Swift.String? {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var address: Swift.String? {
+    get
+  }
+  public var telephone: Swift.String? {
+    get
+  }
+  public var profession: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var personalSummary: Swift.String? {
+    get
+  }
+  public var proofOfCitizenship: Swift.String? {
+    get
+  }
+  public var tdNumbers: Swift.String? {
+    get
+  }
+  public var custodyInfo: Swift.String? {
+    get
+  }
+  public var companyNameArabic: Swift.String?
+  public var companyNameEnglish: Swift.String?
+  public var companyAddressArabic: Swift.String?
+  @objc deinit
+}
+public func top(_ k: Swift.Int, _ prob: [Swift.String : Swift.Double]) -> [(Swift.String, Swift.Double)]
+public func top(_ k: Swift.Int, _ observations: [Vision.VNClassificationObservation]) -> [(Swift.String, Swift.Double)]
+@_hasMissingDesignatedInitializers public class SwiftyTesseract {
+  public var whiteList: Swift.String? {
+    get
+    set
+  }
+  public var blackList: Swift.String? {
+    get
+    set
+  }
+  public var preserveInterwordSpaces: Swift.Bool? {
+    get
+    set
+  }
+  public var minimumCharacterHeight: Swift.Int? {
+    get
+    set
+  }
+  public var version: Swift.String? {
+    get
+  }
+  convenience public init(languages: [IDVSDK.RecognitionLanguage], dataSource: any IDVSDK.LanguageModelDataSource = Bundle.main, engineMode: IDVSDK.EngineMode = .lstmOnly)
+  convenience public init(language: IDVSDK.RecognitionLanguage, dataSource: any IDVSDK.LanguageModelDataSource = Bundle.main, engineMode: IDVSDK.EngineMode = .lstmOnly)
+  @available(*, deprecated, message: "migrate to init(language:dataSource:engineMode:)")
+  convenience public init(language: IDVSDK.RecognitionLanguage, bundle: Foundation.Bundle = .main, engineMode: IDVSDK.EngineMode = .lstmOnly)
+  @available(*, deprecated, message: "migrate to init(languages:dataSource:engineMode:)")
+  convenience public init(languages: [IDVSDK.RecognitionLanguage], bundle: Foundation.Bundle = .main, engineMode: IDVSDK.EngineMode = .lstmOnly)
+  @objc deinit
+}
+extension IDVSDK.SwiftyTesseract {
+  @available(*, deprecated, message: "use performOCR(on:) or performOCRPublisher(on:)")
+  public func performOCR(on image: UIKit.UIImage, completionHandler: (Swift.String?) -> ())
+  public func performOCR(on image: UIKit.UIImage) -> Swift.Result<Swift.String, any Swift.Error>
+  @available(iOS 13.0, *)
+  public func performOCRPublisher(on image: UIKit.UIImage) -> Combine.AnyPublisher<Swift.String, any Swift.Error>
+}
+extension IDVSDK.SwiftyTesseract {
+  public func createPDF(from images: [UIKit.UIImage]) throws -> Foundation.Data
+}
+extension IDVSDK.SwiftyTesseract {
+  public func recognizedBlocks(for level: IDVSDK.ResultIteratorLevel) -> Swift.Result<[IDVSDK.RecognizedBlock], any Swift.Error>
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup16 : IDVSDK.DataGroup {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class SOD : IDVSDK.DataGroup {
+  public var pkcs7CertificateData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ScanResult {
+  final public let documentImage: UIKit.UIImage
+  final public let documentImageFront: UIKit.UIImage?
+  final public let documentType: Swift.String
+  final public let countryCode: Swift.String
+  final public let surnames: Swift.String
+  final public let givenNames: Swift.String
+  final public let documentNumber: Swift.String
+  final public let nationalityCountryCode: Swift.String
+  final public let birthdate: Foundation.Date?
+  final public let sex: Swift.String?
+  final public let expiryDate: Foundation.Date?
+  final public let personalNumber: Swift.String
+  final public let personalNumber2: Swift.String?
+  final public let MRZKey: Swift.String
+  public var faceImage: UIKit.UIImage? {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class InstructionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var instructions: [IDVSDK.InstructionModel]
+  @_Concurrency.MainActor(unsafe) public var selectedDocumentType: IDVSDK.DocumentType!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension IDVSDK.InstructionsViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension IDVSDK.InstructionsViewController : UIKit.UITableViewDelegate {
+}
+@_hasMissingDesignatedInitializers public class InstructionModel {
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCPassportReaderError : Swift.Error {
+  case ResponseError(Swift.String, Swift.UInt8, Swift.UInt8)
+  case InvalidResponse
+  case UnexpectedError
+  case NFCNotSupported
+  case NoConnectedTag
+  case D087Malformed
+  case InvalidResponseChecksum
+  case MissingMandatoryFields
+  case CannotDecodeASN1Length
+  case InvalidASN1Value
+  case UnableToProtectAPDU
+  case UnableToUnprotectAPDU
+  case UnsupportedDataGroup
+  case DataGroupNotRead
+  case UnknownTag
+  case UnknownImageFormat
+  case NotImplemented
+  case TagNotValid
+  case ConnectionError
+  case UserCanceled
+  case InvalidMRZKey
+  case MoreThanOneTagFound
+  case InvalidHashAlgorithmSpecified
+  case UnsupportedCipherAlgorithm
+  case UnsupportedMappingType
+  case PACEError(Swift.String, Swift.String)
+  case ChipAuthenticationFailed
+  case InvalidDataPassed(Swift.String)
+  case NotYetSupported(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.NFCPassportReaderError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum OpenSSLError : Swift.Error {
+  case UnableToGetX509CertificateFromPKCS7(Swift.String)
+  case UnableToVerifyX509CertificateForSOD(Swift.String)
+  case VerifyAndReturnSODEncapsulatedData(Swift.String)
+  case UnableToReadECPublicKey(Swift.String)
+  case UnableToExtractSignedDataFromPKCS7(Swift.String)
+  case VerifySignedAttributes(Swift.String)
+  case UnableToParseASN1(Swift.String)
+  case UnableToDecryptRSASignature(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.OpenSSLError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PassiveAuthenticationError : Swift.Error {
+  case UnableToParseSODHashes(Swift.String)
+  case InvalidDataGroupHash(Swift.String)
+  case SODMissing(Swift.String)
+}
+extension IDVSDK.PassiveAuthenticationError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension CoreGraphics.CGImage {
+  public func pixelBuffer() -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray() -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray(width: Swift.Int, height: Swift.Int, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int, pixelFormatType: Darwin.OSType, colorSpace: CoreGraphics.CGColorSpace, alphaInfo: CoreGraphics.CGImageAlphaInfo, orientation: ImageIO.CGImagePropertyOrientation) -> CoreVideo.CVPixelBuffer?
+}
+extension CoreGraphics.CGImage {
+  public static func create(pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreGraphics.CGImage?
+  public static func create(pixelBuffer: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext) -> CoreGraphics.CGImage?
+}
+public protocol MultiArrayType : Swift.Comparable {
+  static var multiArrayDataType: CoreML.MLMultiArrayDataType { get }
+  static func + (lhs: Self, rhs: Self) -> Self
+  static func - (lhs: Self, rhs: Self) -> Self
+  static func * (lhs: Self, rhs: Self) -> Self
+  static func / (lhs: Self, rhs: Self) -> Self
+  init(_: Swift.Int)
+  var toUInt8: Swift.UInt8 { get }
+}
+extension Swift.Double : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.Float : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.Int32 : IDVSDK.MultiArrayType {
+  public static var multiArrayDataType: CoreML.MLMultiArrayDataType {
+    get
+  }
+  public var toUInt8: Swift.UInt8 {
+    get
+  }
+}
+extension CoreML.MLMultiArray {
+  public func cgImage(min: Swift.Double = 0, max: Swift.Double = 255, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> CoreGraphics.CGImage?
+  public func toRawBytes<T>(min: T, max: T, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> (bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, channels: Swift.Int)? where T : IDVSDK.MultiArrayType
+}
+public func createCGImage(fromFloatArray features: CoreML.MLMultiArray, min: Swift.Float = 0, max: Swift.Float = 255) -> CoreGraphics.CGImage?
+extension CoreML.MLMultiArray {
+  public func image(min: Swift.Double = 0, max: Swift.Double = 255, channel: Swift.Int? = nil, axes: (Swift.Int, Swift.Int, Swift.Int)? = nil) -> UIKit.UIImage?
+}
+public func createUIImage(fromFloatArray features: CoreML.MLMultiArray, min: Swift.Float = 0, max: Swift.Float = 255) -> UIKit.UIImage?
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class COM : IDVSDK.DataGroup {
+  public var version: Swift.String {
+    get
+  }
+  public var unicodeVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  @objc deinit
+}
+public enum RecognitionLanguage {
+  case afrikaans
+  case albanian
+  case amharic
+  case arabic
+  case assamese
+  case azerbaijani
+  case azerbaijaniCyrillic
+  case basque
+  case belarusian
+  case bengali
+  case bosnian
+  case bulgarian
+  case burmese
+  case catalanAndValencian
+  case cebuano
+  case centralKhmer
+  case chineseSimplified
+  case chineseTraditional
+  case croatian
+  case czech
+  case cherokee
+  case danish
+  case dutchFlemish
+  case dzongkha
+  case english
+  case englishMiddle
+  case esperanto
+  case estonian
+  case finnish
+  case frankish
+  case french
+  case frenchMiddle
+  case galician
+  case georgian
+  case georgianOld
+  case german
+  case greekAncient
+  case greekModern
+  case guajarati
+  case haitian
+  case hebrew
+  case hindi
+  case hungarian
+  case icelandic
+  case inuktitut
+  case indonesian
+  case italian
+  case italianOld
+  case irish
+  case javanese
+  case japanese
+  case kannada
+  case kazakh
+  case korean
+  case kurdish
+  case kyrgyz
+  case lao
+  case latin
+  case lithuanian
+  case malayalam
+  case macedonian
+  case malay
+  case maltese
+  case marathi
+  case nepali
+  case norwegian
+  case oriya
+  case pashto
+  case persian
+  case polish
+  case portugese
+  case punjabi
+  case romanian
+  case russian
+  case sanskrit
+  case serbian
+  case serbianLatin
+  case sinhala
+  case slovak
+  case slovenian
+  case spanish
+  case spanishOld
+  case swahili
+  case swedish
+  case syriac
+  case tamil
+  case tagalog
+  case tajik
+  case telugu
+  case thai
+  case tibetan
+  case tigrinya
+  case turkish
+  case uighur
+  case ukrainian
+  case urdu
+  case uzbek
+  case uzbekCyrillic
+  case vietnamese
+  case welsh
+  case yiddish
+  case custom(Swift.String)
+}
+extension IDVSDK.RecognitionLanguage : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ImageIO.CGImagePropertyOrientation {
+  public init(_ orientation: UIKit.UIImage.Orientation)
+}
+extension ImageIO.CGImagePropertyOrientation {
+  public init(_ orientation: UIKit.UIDeviceOrientation)
+}
+@available(iOS 13, macOS 10.15, *)
+public func AESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESECBEncrypt(key: [Swift.UInt8], message: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+extension ObjectiveC.NSObject : IDVSDK.ImageCroppable {
+}
+extension CoreGraphics.CGImage : IDVSDK.ImageCroppable {
+}
+public protocol ImageCroppable {
+}
+public enum DetectionType {
+  case face
+  case barcode
+  case text
+  public static func == (a: IDVSDK.DetectionType, b: IDVSDK.DetectionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ImageDetectResult<T> {
+  case success([T])
+  case notFound
+  case failure(any Swift.Error)
+}
+public struct ImageDetect<T> {
+}
+extension IDVSDK.ImageCroppable {
+  public var detector: IDVSDK.ImageDetect<Self> {
+    get
+  }
+}
+extension IDVSDK.ImageDetect where T : CoreGraphics.CGImage {
+  public func crop(type: IDVSDK.DetectionType, completion: @escaping (IDVSDK.ImageDetectResult<CoreGraphics.CGImage>) -> Swift.Void)
+  public func cropFace(_ completion: @escaping (IDVSDK.ImageDetectResult<CoreGraphics.CGImage>) -> Swift.Void)
+}
+extension IDVSDK.ImageDetect where T : UIKit.UIImage {
+  public func crop(type: IDVSDK.DetectionType, completion: @escaping (IDVSDK.ImageDetectResult<UIKit.UIImage>) -> Swift.Void)
+}
+extension CoreGraphics.CGImage {
+  public func faceCrop(margin: CoreFoundation.CGFloat = 200, completion: @escaping (IDVSDK.FaceCropResult) -> Swift.Void)
+}
+public enum FaceCropResult {
+  case success(CoreGraphics.CGImage)
+  case notFound
+  case failure(any Swift.Error)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup10 : IDVSDK.DataGroup {
+  public var visaNumber: Swift.String?
+  public var visaExpiryDate: Swift.String?
+  public var visaPlaceOfIssueArabic: Swift.String?
+  @objc deinit
+}
+extension IDVSDK.SwiftyTesseract {
+  public enum Error : Swift.Error {
+    case imageConversionError
+    case unableToExtractTextFromImage
+    case unableToCreateRenderer
+    case unableToBeginDocument
+    case unableToProcessPage
+    case unableToEndDocument
+    case unableToRetrieveIterator
+    public static func == (a: IDVSDK.SwiftyTesseract.Error, b: IDVSDK.SwiftyTesseract.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func resizePixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, cropX: Swift.Int, cropY: Swift.Int, cropWidth: Swift.Int, cropHeight: Swift.Int, scaleWidth: Swift.Int, scaleHeight: Swift.Int)
+public func resizePixelBuffer(_ srcPixelBuffer: CoreVideo.CVPixelBuffer, cropX: Swift.Int, cropY: Swift.Int, cropWidth: Swift.Int, cropHeight: Swift.Int, scaleWidth: Swift.Int, scaleHeight: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func resizePixelBuffer(from srcPixelBuffer: CoreVideo.CVPixelBuffer, to dstPixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int)
+public func resizePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+public func resizePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, width: Swift.Int, height: Swift.Int, output: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext)
+extension UIKit.UIImage {
+  @nonobjc public func toByteArrayRGBA() -> [Swift.UInt8]?
+  @nonobjc public class func fromByteArrayRGBA(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreFoundation.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
+  @nonobjc public class func fromByteArrayGray(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreFoundation.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
+}
+public struct VALUES {
+}
+public struct STRING {
+}
+public struct IMAGES {
+}
+public struct FONT {
+}
+public struct COLOR {
+}
+public struct Messages {
+}
+public enum COLORS {
+  case White
+  case Black
+  case Orange
+  case DarkOrange
+  case LightGrey
+  case Clear
+  case Blue
+  case CustomGreyBG
+  case AppColor
+  case TextColor
+  case TxtFldBgrnd
+  case Purple
+  public static func == (a: IDVSDK.COLORS, b: IDVSDK.COLORS) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationPublicKeyInfo : IDVSDK.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class SecureMessagingSessionKeyGenerator {
+  @objc deinit
+}
+@objc @available(iOS 15, *)
+public class PassportReader : ObjectiveC.NSObject {
+  public var passiveAuthenticationUsesOpenSSL: Swift.Bool
+  public init(logLevel: IDVSDK.LogLevel = .info, masterListURL: Foundation.URL? = nil)
+  public func setMasterListURL(_ masterListURL: Foundation.URL)
+  public func overrideNFCDataAmountToRead(amount: Swift.Int)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readPassport(mrzKey: Swift.String, tags: [IDVSDK.DataGroupId] = [], skipSecureElements: Swift.Bool = true, skipCA: Swift.Bool = false, skipPACE: Swift.Bool = false, customDisplayMessage: ((IDVSDK.NFCViewDisplayMessage) -> Swift.String?)? = nil) async throws -> IDVSDK.NFCPassportModel
+  #endif
+  @objc deinit
+}
+@available(iOS 15, *)
+extension IDVSDK.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
+  public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: any Swift.Error)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup12 : IDVSDK.DataGroup {
+  public var issuingAuthority: Swift.String? {
+    get
+  }
+  public var dateOfIssue: Swift.String? {
+    get
+  }
+  public var otherPersonsDetails: Swift.String? {
+    get
+  }
+  public var endorsementsOrObservations: Swift.String? {
+    get
+  }
+  public var taxOrExitRequirements: Swift.String? {
+    get
+  }
+  public var frontImage: [Swift.UInt8]? {
+    get
+  }
+  public var rearImage: [Swift.UInt8]? {
+    get
+  }
+  public var personalizationTime: Swift.String? {
+    get
+  }
+  public var personalizationDeviceSerialNr: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DocTypeEnum : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DocTypeEnum : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DocTypeEnum : Swift.RawRepresentable {}
+extension IDVSDK.DocumentType : Swift.Equatable {}
+extension IDVSDK.DocumentType : Swift.Hashable {}
+extension IDVSDK.DocumentType : Swift.RawRepresentable {}
+extension IDVSDK.PACEMappingType : Swift.Equatable {}
+extension IDVSDK.PACEMappingType : Swift.Hashable {}
+extension IDVSDK.EngineMode : Swift.Equatable {}
+extension IDVSDK.EngineMode : Swift.Hashable {}
+extension IDVSDK.EngineMode : Swift.RawRepresentable {}
+extension IDVSDK.LogLevel : Swift.Equatable {}
+extension IDVSDK.LogLevel : Swift.Hashable {}
+extension IDVSDK.LogLevel : Swift.RawRepresentable {}
+extension IDVSDK.PassportAuthenticationStatus : Swift.Equatable {}
+extension IDVSDK.PassportAuthenticationStatus : Swift.Hashable {}
+extension IDVSDK.ResultIteratorLevel : Swift.Equatable {}
+extension IDVSDK.ResultIteratorLevel : Swift.Hashable {}
+extension IDVSDK.ResultIteratorLevel : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.CertificateType : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.CertificateType : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.CertificateItem : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.CertificateItem : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.CertificateItem : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DataGroupId : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DataGroupId : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension IDVSDK.DataGroupId : Swift.RawRepresentable {}
+extension IDVSDK.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
+extension IDVSDK.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
+extension IDVSDK.AppStoryboard : Swift.Equatable {}
+extension IDVSDK.AppStoryboard : Swift.Hashable {}
+extension IDVSDK.AppStoryboard : Swift.RawRepresentable {}
+extension IDVSDK.DetectionType : Swift.Equatable {}
+extension IDVSDK.DetectionType : Swift.Hashable {}
+extension IDVSDK.SwiftyTesseract.Error : Swift.Equatable {}
+extension IDVSDK.SwiftyTesseract.Error : Swift.Hashable {}
+extension IDVSDK.COLORS : Swift.Equatable {}
+extension IDVSDK.COLORS : Swift.Hashable {}
