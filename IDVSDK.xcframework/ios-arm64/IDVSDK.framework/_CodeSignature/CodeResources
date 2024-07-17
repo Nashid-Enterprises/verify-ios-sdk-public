@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		tLvTWYI7aEuIwL3Hem6itkgRXEI=
+		UUEnCWjqrz/YXxC5JpQiMXu82A4=
 		</data>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -59,6 +59,18 @@
 		<key>FaceValidationViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
 		mbpkOw+JULQynhbBALyZYVYmq5E=
+		</data>
+		<key>Frameworks/libtesseract.framework/Info.plist</key>
+		<data>
+		w0xr/19EcP6XAKQuS5c8903y1Tk=
+		</data>
+		<key>Frameworks/libtesseract.framework/_CodeSignature/CodeResources</key>
+		<data>
+		kSBVUmyKw6NJWg2OCGjZE7Fie7w=
+		</data>
+		<key>Frameworks/libtesseract.framework/libtesseract</key>
+		<data>
+		KYkhi9uLBvhTBacWfkb28OcWYNw=
 		</data>
 		<key>Headers/Box.h</key>
 		<data>
@@ -170,7 +182,7 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		MJzJAvoYZoUeBwdiMm0iMmyNHEY=
+		/iUm/Lfi2Es33/6SrhMLfF5xIGM=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -393,7 +405,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IwI6I+P6alpJ1Xv0d6X/MqZ1bdYdD4saBBpPCO0PPBU=
+			HOalNuO7AVBAb/mQAH30Hm5Gbt3CAb1JmmfCkFtp/Gw=
 			</data>
 		</dict>
 		<key>DeepLabV3.mlmodelc/analytics/coremldata.bin</key>
@@ -485,6 +497,27 @@
 			<key>hash2</key>
 			<data>
 			FidzcRFylGLkS/ONCUtcQmXGCRy8KphRiAgaWR8YZ9o=
+			</data>
+		</dict>
+		<key>Frameworks/libtesseract.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Db/+BlV/5H3KNDUNslk2EtWqzc47BDY4+/V5Ow9gNo4=
+			</data>
+		</dict>
+		<key>Frameworks/libtesseract.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cUAK+U3MFUZhGwCt7f1iOiB9r8b/kW+buhWYKvb0xLg=
+			</data>
+		</dict>
+		<key>Frameworks/libtesseract.framework/libtesseract</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6koyLPgTsh3EHV+IezMIq+GWA17sZLUKbXkVL7/jx24=
 			</data>
 		</dict>
 		<key>Headers/Box.h</key>
@@ -673,7 +706,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h1sk4Qa33MUS6v+gFA/G0/XCDAQISVWgKrKv1a7ygt0=
+			VsZ6YFwp3OsTpqUIt8dQTclLcCkGX/Vy4pzefpUfda4=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios.abi.json</key>

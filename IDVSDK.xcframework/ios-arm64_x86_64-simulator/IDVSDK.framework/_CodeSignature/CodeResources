@@ -60,6 +60,18 @@
 		<data>
 		mbpkOw+JULQynhbBALyZYVYmq5E=
 		</data>
+		<key>Frameworks/libtesseract.framework/Info.plist</key>
+		<data>
+		R04F2IkXmsGdqpS9BXpI45XjDk8=
+		</data>
+		<key>Frameworks/libtesseract.framework/_CodeSignature/CodeResources</key>
+		<data>
+		rEGs+zjBW6N9wGOjr1xvOkw9E+I=
+		</data>
+		<key>Frameworks/libtesseract.framework/libtesseract</key>
+		<data>
+		PhPkhWhCItHq8EdaisRqhpyWRBE=
+		</data>
 		<key>Headers/Box.h</key>
 		<data>
 		e/W8u12mWlhQPK4w/BEj4TBywac=
@@ -170,11 +182,11 @@
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		6Y0lbrfelF/BSHQjBneAoPfBbs4=
+		SJ81A3iHRxNwNybQvlMM2xwY/bA=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		sjOs/mOOiBlov8VlOfQMEk07rIo=
+		aGmW8/h2s/4QRb6p41VankS9CwE=
 		</data>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -511,6 +523,27 @@
 			FidzcRFylGLkS/ONCUtcQmXGCRy8KphRiAgaWR8YZ9o=
 			</data>
 		</dict>
+		<key>Frameworks/libtesseract.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			78Bk1kdKuuPWXGv/jzQCMdV0tdbacCYTddSuRD/AkXE=
+			</data>
+		</dict>
+		<key>Frameworks/libtesseract.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			v8egj3wkB35NCXC0wVQ4RYyzmzfT/6pNRkfnKoDWz90=
+			</data>
+		</dict>
+		<key>Frameworks/libtesseract.framework/libtesseract</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wrlNrY3nUpJFf8MPP9KuJZ9PVRhUfbvJsG05cs98s50=
+			</data>
+		</dict>
 		<key>Headers/Box.h</key>
 		<dict>
 			<key>hash2</key>
@@ -697,14 +730,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pB5eoLg6PUAXR+9cLcdGxqMYeerZNeKZvVgUg4gKvxE=
+			YQrihVVxNtmOTtQDqtCu6L+fNS5hsv6eKZLwSPwG+tE=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1l59dCY7ctDvA82aQ93wTdCwLljDATsfF6H3k5AlwAc=
+			/u8LI5fbHUEnioR73uMZpsAPu9gqZaaWFMirVfCOCoA=
 			</data>
 		</dict>
 		<key>Modules/IDVSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
