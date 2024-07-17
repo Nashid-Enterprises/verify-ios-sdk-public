@@ -18,13 +18,9 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc   = true
   spec.static_framework = true
-  spec.vendored_frameworks = 'IDVSDK.framework'
-
-  # Add your Swift package dependency here
-  spec.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5']
-  spec.swift_package 'https://github.com/SwiftyTesseract/libtesseract.git', '0.2.0'
+  spec.vendored_frameworks = 'IDVSDK.xcframework'
   
-  spec.dependency "OpenCV-Dynamic-Framework", "'4.8.0-b1"
+  spec.dependency "OpenCV-Dynamic-Framework", "4.8.0-b1"
   spec.dependency "SwiftyTesseract", " ~> 3.1.3"
   spec.dependency "TensorFlowLiteObjC", "2.14.0"
   spec.dependency "Alamofire", "5.8.1"
@@ -43,4 +39,3 @@ Pod::Spec.new do |spec|
   }
 
 end
-
